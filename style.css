@@ -1,0 +1,280 @@
+body{
+    font-family: Arial, Tahoma;
+    font-size: 12px;
+}
+ 
+#main{
+    width: 1000px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#head{
+    height: 120px;
+    
+}
+#head_logo{
+     width: 25%;
+     height: 120px;
+     float: left;
+     background-color: #b3d9ff;
+     margin-bottom: 5px;
+}
+#head_text{
+     width: 75%;
+     height: 120px;
+     float: left;
+     background-color: #b3d9ff;    
+     line-height: 0.8;
+}
+
+#head-link{
+     height: 60px;
+     line-height: 30px;
+     padding 0;
+     border: 1px solid #CDCDCD;
+     background-color: #F5F5F5;
+     margin-bottom: 5px;
+     clear: both;
+}
+/* Tao menu cho head-link */
+   #head-link ul {
+      background: #1F568B;
+      list-style-type: none;
+      text-align: center;
+}
+
+#head-link li {
+      color: #f1f1f1;
+      display: inline-block;
+      width: 120px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: -5px;
+}
+
+#head-link a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+}
+#head-link a:hover {
+      background: #F1F1F1;
+      color: #333;
+}
+
+
+#left{
+     width: 150px;
+     min-height: 400px;
+     border: 1px solid #CDCDCD;
+     float:left;
+     background-color: #e6ccff;
+     margin-bottom: 5px;
+}
+#content{
+     width: 715px;
+     min-height: 600px;
+     border: 1px solid #CDCDCD;
+     float:left;
+     
+     margin-right: 5px;
+     margin-bottom: 5px;
+}
+#content-home{
+     
+     min-height: 350px;
+     border: 1px solid #ddddbb;
+     margin-bottom: 5px;
+     
+     /*background-color: #ddddbb; */
+}
+#right{
+     width: 270px;
+     min-height: 600px;
+     border: 1px solid #CDCDCD;
+     float:right;
+     margin-bottom: 5px;
+     padding-left:5px;
+     line-height: 1.5;
+}
+#footer{
+     height: 70px;
+     clear: both;
+     border: 1px solid #CDCDCD;
+     background-color: #F8F8FF;
+}
+
+/* */
+input[type=text] {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+#control-content-table-1-1{
+     width: 47%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+ }
+#control-content-table-1-2{
+     width: 47%;
+     float: right;
+     margin-top: 10px;
+     margin-right: 10px;
+  
+ }
+
+#control-table {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/* */
+.button {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  /* width: 80%; */
+  transition: all 2s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* HELP */
+#help-home{
+     min-height: 350px;
+     border: 1px solid:#ddddbb ;
+     padding-top: 5px;
+     margin-bottom: 5px;
+     background-color: rgba(0,0,0, 0.1); 
+}
+.help-text{
+     margin-left: 10px;
+}
+.help-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: rgba(0,255,0, 0.1);  
+    /* #f2f2f2; */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* REPORT */
+#report-content-1-1{
+     width: 49%;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#report-content-1-2{
+     width: 49%;
+     float: right;
+     margin-top: 5px;
+     margin-right: 5px;
+}
+
+ #report-table {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+#report_right{
+     width: 270px;
+     min-height: 754px;
+     border: 1px solid #CDCDCD;
+     float:right;
+     margin-bottom: 5px;
+     padding-left:5px;
+     line-height: 1.5;
+}
+
+/* Box styles */
+.myBox {
+    border: none;
+    padding: 5px;
+    font: 12px sans-serif;
+    width: 330px;
+    height: 300px;
+    overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid yellowgreen;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: yellowgreen;  
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #88ba1c;  
+}
+
+
+/*----------------------------------------------------------------------------
+// 						Ve duong tron START/STOP
+//---------------------------------------------------------------------------- */
+
+#Lamp_Display {
+width: 100px;
+height: 100px;
+margin-left: 80px;
+/* background: red;  */
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+}
+

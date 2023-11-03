@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>LUAN VAN 2016</title>
+	<meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="smoothie.js"></script>
+	<script type="text/javascript" src="myjavascript.js"></script>
+	<script type="text/javascript">
+		//Web = 1: Control
+		//Web = 2: Trend
+		//Web = 3: Report
+		web_current = 3;
+	</script>
+	
+	<!-- HIEN THI LEN REPORT -->
+	<script type="text/javascript">
+	
+		function report_display() {			
+			var text_1 = document.getElementById("report1");
+			var text_2 = document.getElementById("report2");
+			setInterval(function() {
+				if (chiso<=10) { 
+					if (Run == "1") {
+						Status = "ON";
+					} else {
+						Status = "OFF";
+					}
+	            	arr_display_1 = thoigian+", Stt:"+Status+": SP1: "+SP1+", PV1: "+arr_value_1[chiso];
+	            	arr_display_2 = thoigian+", Stt:"+Status+": SP2: "+SP2+", PV2: "+arr_value_2[chiso];
+
+
+	            	currentText_1 += arr_display_1+" \n";
+	            	currentText_2 += arr_display_2+" \n";
+	                var textnode_1 = document.createTextNode(arr_display_1);
+	                var textnode_2 = document.createTextNode(arr_display_2);
+	                var lb_1 = document.createElement("br");
+	                var lb_2 = document.createElement("br");
+	                text_1.appendChild(textnode_1);
+	                text_1.appendChild(lb_1);
+	                text_2.appendChild(textnode_2);
+	                text_2.appendChild(lb_2);
+	                chiso++;
+                } 
+                if (chiso >= 10) {
+                	chiso = 0;
+                	arr_value_full_1+=currentText_1;
+                	arr_value_full_2+=currentText_2;
+                	arr_value_1 = [];
+                   	arr_value_2 = [];
+                	currentText_1 =[];
+                	currentText_2 = [];
+                }
+        	}, 1000);
+		}
+
+
+		
+	</script>
+	
+</head>
+
+<body onload="load_xong()">
+	<div id="main">
+	    <div id="head">
+	    	<div id="head_logo">
+	    		
+				<img src="logo.png" style="margin-left: 26px; margin-top: 10px;" />
+                </div>
+
+                <div id="head_text" >
+                    <h3 style="text-align:center; color:blue;">TRƯỜNG ĐẠI HỌC THỦY LỢI </h3>
+                    <h2 style="text-align:center; color:blue;">ĐỒ ÁN TỐT NGHIỆP </h2>
+                    <h1 style="text-align:center; color:red;">ĐIỀU KHIỂN VÀ GIÁM SÁT HỆ THỐNG ĐẬP THỦY LỢI </h1>
+                    <h3 style="text-align:center; color:green;">GVHD: NGÔ QUANG VĨ    -   SVTH: NGUYỄN HỒNG QUANG-1951212003 </h3>
+				
+			</div>
+
+	    </div>
+	    
+	    <div id="head-link">
+	    	  <ul>
+			    <li><a href="index.html">HOME</a></li>
+			    <li><a href="control.html" >CONTROL</a></li>
+			    <li><a href="trend.html">TREND</a></li>
+			    <li><a href="report.html" style="color:yellow">REPORT</a></li>
+			    <li><a href="help.html">HELP</a></li>
+			  </ul>
+
+	    </div>
+	    
+	    
+
+
+
+			<marquee> ĐỒ ÁN TỐT NGHIỆP 2023 - NGUYỄN HỒNG QUANG - 1951212003</marquee>
+
+
+	    </div>
+	    <div id="report_right">
+	    	<H3>Hôm nay:<p id="time" style="text-align:center" ></p></H3>
+	    	<hr>
+	    		<div id="Lamp_Display"></div>
+			<hr>
+	    	<h4>Hướng dẫn</h4>
+	    	<p>Bước 1: Đèn màu xanh là trạng thái hoạt động, đèn màu đỏ là trạng thái kết thúc. Để bật START/STOP vui lòng quay lại trang Control hay Trend </p>
+	    	<p>Bước 2: Trong trường hợp trạng thái đèn màu xanh START, Sau mỗi giây dữ liệu sẽ hiển thị lên trên màn hình</p>
+	    	<p>Bước 3: Để tải dữ liệu về vui lòng bấm vào "Export Data". Dữ liệu sẽ được tải về dưới dạng file word.</p>
+	    	<p>Bước 4: Để biết thêm thông tin vui lòng vào trang HELP</p>
+	    </div>
+	    
+		<div id="footer">
+            
+			<table>
+			  <tr>
+			    <td> NGUYỄN HỒNG QUANG </td>
+			  </tr>
+			<tr>
+				<td>Số điện thoại: 0355-596-329</td>
+			</tr>
+			<tr>
+				<td>Email: nguyenhongquang30072001@gmail.com</td>
+			</tr>
+			</table>
+		</div>
+    </div>
+
+
+</body>
