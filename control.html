@@ -24,9 +24,9 @@
 	<title>ĐỒ ÁN 2023</title>
 	<meta charset="UTF-8">
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<!-- <script type="text/javascript" src="myjavascript.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="myjavascript.js"></script>
+	
 	<script type="text/javascript">
 		//Web = 1: Control
 		//Web = 2: Trend
@@ -36,7 +36,7 @@
 	
 </head>
 
-<body onload="load_xong()">
+<body >
 	<div id="main">
 	    <div id="head">
 			<div id="head_logo">
@@ -65,86 +65,91 @@
 		</div>
 	    
  <div id="content">
+
+	<label>đo nước:</label>
+    <input id="quang" disabled="disabled" type="text" />
+    <br /><br />
+
 	<form >
 		<p>
-		<input type="submit" value="START">
+		<input type="submit" value="START"> 
 		<input type="hidden" name='"START"' value ="1">
 		<input type="hidden" name='"STOP"' value ="0">
-	   </p>
+ 	   </p>
 	</form>
 	<form>
 	   <p>	
 		<input type="submit" value="STOP">
 		<input type="hidden" name='"START"' value ="0">
-		<input type="hidden" name='"STOP"' value ="1">
+ 		<input type="hidden" name='"STOP"' value ="1">
 	   </p>
 	</form>
 	 
 
 
-<form >
+	<form >
 		<p>
 		<input type="submit" value="CHỌN BƠM 1">
 		<input type="hidden" name='"CM3_34"' value ="0">
 		<input type="hidden" name='"CM3_12"' value ="1">
 	   </p>
-	   </form>
-	   <form>
+	</form>
+	<form>
 	   <p>
 		<input type="submit" value="CHỌN BƠM 2">
 		<input type="hidden" name='"CM3_12"' value ="0">
 		<input type="hidden" name='"CM3_34"' value ="1">
 	   </p>
-	   </form>
+	</form>
 	
 
-	   <form >
+	<form >
 		<p>
 		<input type="submit" value="CHẾ ĐỘ AUTO">
 		<input type="hidden" name='"CM1_12"' value ="0">
 		<input type="hidden" name='"CM1_34"' value ="1">
 	   </p>
-	   </form>
-	   <form>
+	</form>
+	<form>
 	   <p>
 		<input type="submit" value="CHẾ ĐỘ TAY ">
 		<input type="hidden" name='"CM1_12"' value ="1">
 		<input type="hidden" name='"CM1_34"' value ="0">
 	   </p>
-	   </form>
+	</form>
 	
 
 
-	   <form >
+	<form >
 		<p>
 		<input type="submit" value=" BẬT CHẾ ĐỘ TAY BƠM 1">
 		<input type="hidden" name='"1ND"' value ="1">
 		<input type="hidden" name='"1NC"' value ="0">
 	   </p>
-	   </form>
-	   <form>
+	</form>
+	<form>
 	   <p>
 		<input type="submit" value="TẮT CHẾ ĐỘ TAY BƠM 1 ">
 		<input type="hidden" name='"1ND"' value ="0">
 		<input type="hidden" name='"1NC"' value ="1">
 	   </p>
-	   </form>
+	</form>
 
 
-	   <form >
+	<form >
 		<p>
 		<input type="submit" value=" BẬT CHẾ ĐỘ TAY BƠM 2">
 		<input type="hidden" name='"2ND"' value ="1">
 		<input type="hidden" name='"2NC"' value ="0">
 	   </p>
-	   </form>
-	   <form>
+	</form>
+	<form>
 	   <p>
 		<input type="submit" value="TẮT CHẾ ĐỘ TAY BƠM 2 ">
 		<input type="hidden" name='"2ND"' value ="0">
 		<input type="hidden" name='"2NC"' value ="1">
 	   </p>
-	   </form>
+	</form>
 	
 	    </div>
 	    <div id="right">
@@ -155,9 +160,9 @@
 	    	
 	    	<h4>Hướng dẫn</h4>
 	    	<p>Bước 1: Bắt đầu/kết thúc điều khiển bằng cách nhấn nút START/STOP</p>
-	    	<p>Bước 2: Điền các thông số Kp, Ki, Kd (thường các giá trị này đã có sẵn)</p>
-	    	<p>Bước 3: Đặt giá trị mức nước mong muốn ở ô "Set Point"</p>
-	    	<p>Bước 4: Bấm nút Set Value để đặt gửi giá trị về Server</p>
+	    	<p>Bước 2: Chọn chế độ làm việc auto/manual. Nếu chọn chế độ auto thì chọn bơm làm việc trước</p>
+	    	<p>Bước 3: Nếu chọn chế độ auto thì chọn bơm làm việc trước </p>
+	    	<p>Bước 4: Nếu chọn manual thì chọn bơm làm việc</p>
 
 	    </div>
 	    
