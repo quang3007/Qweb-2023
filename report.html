@@ -4,8 +4,11 @@
 	<title>ĐỒ ÁN 2023</title>
 	<meta charset="UTF-8">
 	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="smoothie.js"></script>
 	<script type="text/javascript" src="myjavascript.js"></script>
+	<script type="text/javascript" src="trend.js"></script>
+
 	<script type="text/javascript">
 		//Web = 1: Control
 		//Web = 2: Trend
@@ -78,7 +81,7 @@
                 </div>
 
             </div>
-	    
+		</div>
 	    <div id="head-link">
 	    	  <ul>
 			    <li><a href="index.html">HOME</a></li>
@@ -89,25 +92,41 @@
 			  </ul>
 
 	    </div>
-	    
-	    
+	    <div id="content">
+	    	
+	    	<div id="container">
+	    		<div style=" margin: 6px 0px 6px 0px; display: flex; justify-content: center; align-items: center;">
+					<canvas id="mycanvas1" width="600" height="300" style="border: 1px solid #000;"></canvas>    
+				</div>
+			</div>
+
+			<div class="show-water-level" style="text-align: center;">
+				<p style="margin: 4px 0px 2px 0px;"> Mức nước:</p>
+				<input style=" width: 80%; " id="quang" disabled="disabled" type="text" />
+			</div>
+			
+				<!-- REPORT -->
+			
 
 
-
-			<marquee> ĐỒ ÁN TỐT NGHIỆP 2023 - NGUYỄN HỒNG QUANG - 1951212003</marquee>
-
+			<br>
+			<br>
+			<br>
+			
+			
+			<marquee> ĐỒ ÁN TỐT NGHIỆP - NGUYỄN HỒNG QUANG - 1951212003 </marquee>
 
 	    </div>
-	    <div id="report_right">
+	    <div id="right">
 	    	<H3>Hôm nay:<p id="time" style="text-align:center" ></p></H3>
 	    	<hr>
-	    		<div id="Lamp_Display"></div>
+	    	<div id="Lamp_Display"></div>
 			<hr>
 	    	<h4>Hướng dẫn</h4>
-	    	<p>Bước 1: Đèn màu xanh là trạng thái hoạt động, đèn màu đỏ là trạng thái kết thúc. Để bật START/STOP vui lòng quay lại trang Control hay Trend </p>
-	    	<p>Bước 2: Trong trường hợp trạng thái đèn màu xanh START, Sau mỗi giây dữ liệu sẽ hiển thị lên trên màn hình</p>
-	    	<p>Bước 3: Để tải dữ liệu về vui lòng bấm vào "Export Data". Dữ liệu sẽ được tải về dưới dạng file word.</p>
-	    	<p>Bước 4: Để biết thêm thông tin vui lòng vào trang HELP</p>
+	    	<p>Bước 1: Bắt đầu/kết thúc điều khiển bằng cách nhấn nút START/STOP</p>
+	    	<p>Bước 2: Để thay đổi giá trị thông số Kp, Ki, Kd vui lòng quay lại trang "Control"</p>
+	    	<p>Bước 3: Đặt giá trị mức nước mong muốn ở ô "Set Point"</p>
+	    	<p>Bước 4: Bấm nút Set Value để đặt gửi giá trị về Server. Nếu muốn thay đổi mức nước quay lại bước 3, Nếu muốn thay đổi thông số Kp, Ki, Kd vui lòng quay lại Bước 2</p>
 	    </div>
 	    
 		<div id="footer">

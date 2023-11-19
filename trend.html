@@ -7,6 +7,7 @@
 	<title>ĐỒ ÁN 2023</title>
 	<meta charset="UTF-8">
 	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="smoothie.js"></script>
 	<script type="text/javascript" src="trend.js"></script>
 
@@ -18,7 +19,7 @@
 	</script>
 </head>
 
-<body>
+<body onload="load_xong()">
 	<div id="main">
 		<div id="head">
 			<div id="head_logo">
@@ -50,9 +51,16 @@
 	    
 		<div id="content">
 	    	
-	    		<div id="control-table">
-					<canvas id="mycanvas1" width="315" height="200"></canvas>    
+	    	<div id="container">
+	    		<div style=" margin: 6px 0px 6px 0px; display: flex; justify-content: center; align-items: center;">
+					<canvas id="mycanvas1" width="600" height="400" style="border: 1px solid #000;"></canvas>    
 				</div>
+			</div>
+
+			<div class="show-water-level" style="text-align: center;">
+				<p style="margin: 4px 0px 2px 0px;"> Mức nước:</p>
+				<input style=" width: 80%; " id="quang" disabled="disabled" type="text" />
+			</div>
 							
 			
 			<br>

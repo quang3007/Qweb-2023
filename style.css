@@ -2,6 +2,20 @@ body{
     font-family: Arial, Tahoma;
     font-size: 12px;
 }
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa của container */
+    margin: 0 auto; /* Canh giữa container */
+    overflow: hidden; /* Loại bỏ các lề nếu có float cột */
+}
+
+.column {
+    width: 50%; /* Chiều rộng của mỗi cột */
+    float: left; /* Đặt cột bên trái */
+    box-sizing: border-box; /* Bao gồm kích thước đường biên và padding trong chiều rộng của cột */
+    padding: 15px; /* Đặt lề và padding theo nhu cầu */
+}
  
 #main{
     width: 1000px;
