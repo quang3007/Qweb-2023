@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- AWP_In_Variable Name='"MUC_NUOC"' -->
+
+
 <html lang="vi">
 <head>
 	<title>ĐỒ ÁN 2023</title>
@@ -6,7 +9,7 @@
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="smoothie.js"></script>
-	<script type="text/javascript" src="myjavascript.js"></script>
+	<!-- <script type="text/javascript" src="myjavascript.js"></script> -->
 	<script type="text/javascript" src="trend.js"></script>
 
 	<script type="text/javascript">
@@ -15,12 +18,6 @@
 		//Web = 3: Report
 		web_current = 3;
 	</script>
-	
-
-
-		
-	</script>
-	
 </head>
 
 <body onload="load_xong()">
@@ -52,11 +49,12 @@
 			  </ul>
 
 	    </div>
-	    <div id="content">
+	    
+		<div id="content">
 	    	
 	    	<div id="container">
 	    		<div style=" margin: 6px 0px 6px 0px; display: flex; justify-content: center; align-items: center;">
-					<canvas id="mycanvas1" width="600" height="300" style="border: 1px solid #000;"></canvas>    
+					<canvas id="mycanvas1" width="500" height="250" style="border: 1px solid #000;"></canvas>    
 				</div>
 			</div>
 
@@ -64,29 +62,36 @@
 				<p style="margin: 4px 0px 2px 0px;"> Mức nước:</p>
 				<input style=" width: 80%; " id="quang" disabled="disabled" type="text" />
 			</div>
-			
-				<!-- REPORT -->
-			
 
+			<!-- REPORT -->
+			<div class="container">
+				<div id="report-table" style="background-color:rgba(0, 255, 191,0.2)">
+					<p style="text-align:center; font-size:120%;color:blue">DATA REPORT</p><hr>
+					<div class="myBox" id="report1"></div>
+				</div>
+			</div>
 
-			<br>
-			<br>
+			<div style="text-align: center;">
+				<button class="button" style="width: 98%; background-color:rgba(0,255,0,1)" onclick="saveTextAsFile()"><span>Export Data </span></button>
+			</div>
+
 			<br>
 			
 			
 			<marquee> ĐỒ ÁN TỐT NGHIỆP - NGUYỄN HỒNG QUANG - 1951212003 </marquee>
 
 	    </div>
-	    <div id="right">
+	    <div id="right" style=" width: 270px; min-height: 796px; border: 1px solid #CDCDCD; float:right; margin-bottom: 5px; padding-left:5px; line-height: 1.5;">
 	    	<H3>Hôm nay:<p id="time" style="text-align:center" ></p></H3>
 	    	<hr>
 	    	<div id="Lamp_Display"></div>
 			<hr>
 	    	<h4>Hướng dẫn</h4>
 	    	<p>Bước 1: Bắt đầu/kết thúc điều khiển bằng cách nhấn nút START/STOP</p>
-	    	<p>Bước 2: Để thay đổi giá trị thông số Kp, Ki, Kd vui lòng quay lại trang "Control"</p>
-	    	<p>Bước 3: Đặt giá trị mức nước mong muốn ở ô "Set Point"</p>
-	    	<p>Bước 4: Bấm nút Set Value để đặt gửi giá trị về Server. Nếu muốn thay đổi mức nước quay lại bước 3, Nếu muốn thay đổi thông số Kp, Ki, Kd vui lòng quay lại Bước 2</p>
+	    	<p>Bước 2: Để thay đổi chế độ làm việc TỰ ĐỘNG/TAY vui lòng quay lại trang CONTROL. </p>
+			<p>Bước 3: Xem đồ thị mực nước, sau mỗi giây dữ liệu sẽ hiển thị trên màn hình ở bảng thông số DATA REPORT </p>
+			<p>Bước 4: Để tải dữ liệu về vui lòng bấm vào "Export Data". Dữ liệu sẽ được tải về dưới dạng file txt.</p>
+			<p>Bước 5: Để biết thêm thông tin vui lòng vào trang HELP</p>
 	    </div>
 	    
 		<div id="footer">
