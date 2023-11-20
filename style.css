@@ -160,7 +160,7 @@ input[type=text]:focus {
 .button {
   display: inline-block;
   border-radius: 8px;
-  background-color: #f4511e;
+  background-color: #55443f;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -219,17 +219,17 @@ input[type=text]:focus {
 
 /* REPORT */
 #report-content-1-1{
-     width: 49%;
-    float: left;
+     width: 95%;
+     float: left;
     margin-top: 5px;
     margin-left: 5px;
 }
-#report-content-1-2{
+/* #report-content-1-2{
      width: 49%;
      float: right;
      margin-top: 5px;
      margin-right: 5px;
-}
+} */
 
  #report-table {
     border-radius: 5px;
@@ -252,7 +252,7 @@ input[type=text]:focus {
     border: none;
     padding: 5px;
     font: 12px sans-serif;
-    width: 330px;
+    width: 660px;
     height: 300px;
     overflow: scroll;
 }

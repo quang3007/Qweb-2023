@@ -16,46 +16,6 @@
 		web_current = 3;
 	</script>
 	
-	<!-- HIEN THI LEN REPORT -->
-	<script type="text/javascript">
-	
-		function report_display() {			
-			var text_1 = document.getElementById("report1");
-			var text_2 = document.getElementById("report2");
-			setInterval(function() {
-				if (chiso<=10) { 
-					if (Run == "1") {
-						Status = "ON";
-					} else {
-						Status = "OFF";
-					}
-	            	arr_display_1 = thoigian+", Stt:"+Status+": SP1: "+SP1+", PV1: "+arr_value_1[chiso];
-	            	arr_display_2 = thoigian+", Stt:"+Status+": SP2: "+SP2+", PV2: "+arr_value_2[chiso];
-
-
-	            	currentText_1 += arr_display_1+" \n";
-	            	currentText_2 += arr_display_2+" \n";
-	                var textnode_1 = document.createTextNode(arr_display_1);
-	                var textnode_2 = document.createTextNode(arr_display_2);
-	                var lb_1 = document.createElement("br");
-	                var lb_2 = document.createElement("br");
-	                text_1.appendChild(textnode_1);
-	                text_1.appendChild(lb_1);
-	                text_2.appendChild(textnode_2);
-	                text_2.appendChild(lb_2);
-	                chiso++;
-                } 
-                if (chiso >= 10) {
-                	chiso = 0;
-                	arr_value_full_1+=currentText_1;
-                	arr_value_full_2+=currentText_2;
-                	arr_value_1 = [];
-                   	arr_value_2 = [];
-                	currentText_1 =[];
-                	currentText_2 = [];
-                }
-        	}, 1000);
-		}
 
 
 		
