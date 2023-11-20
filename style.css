@@ -252,7 +252,7 @@ input[type=text]:focus {
     border: none;
     padding: 5px;
     font: 12px sans-serif;
-    width: 660px;
+    width: 690px;
     height: 300px;
     overflow: scroll;
 }

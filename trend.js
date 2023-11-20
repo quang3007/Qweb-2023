@@ -33,20 +33,47 @@ function report_display() {
     let mucNuoc = $('#quang').val() ? parseFloat($('#quang').val()) : 0;
     if (startPrj == 1) {
       let status = "ON";
-      if ((onAutoPrj == 1 && onAutoBom1Prj == 1) || (onHandmadePrj == 1 && onHandmadeBom1Prj == 1)) {
-        statusBom1 = "ON";
-      } else {
-        statusBom1 = "OFF";
-      }
-      if ((onAutoPrj == 1 && onAutoBom2Prj == 1) || (onHandmadePrj == 1 && onHandmadeBom2Prj == 1)){
-        statusBom2 ="ON";
-      } else {
-        statusBom2 = "OFF";
-      }
-      arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", Trạng thái cửa xả 1:" + statusBom1 + ",Trạng thái cửa xả 2:" + statusBom2 + " " + "Mực nước: " + mucNuoc;
+        if ((onAutoPrj == 1 ) && (onHandmadePrj == 0 )){
+          let statusmode ="TỰ ĐỘNG";
+            if (onAutoPrj == 1 && onAutoBom1Prj == 1){
+              statusBom1 = "ON";
+            } else {
+              statusBom1 = "OFF";
+            }
+            if (onAutoPrj == 1 && onAutoBom2Prj == 1){
+              statusBom2 ="ON";
+            } else {
+              statusBom2 ="OFF";
+            }
+            arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", Chế độ:" + statusmode +  ", Trạng thái cửa xả 1:" + statusBom1 + ",Trạng thái cửa xả 2:" + statusBom2 + " " + "Mực nước: " + mucNuoc;
+        } else {
+          let statusmode ="TAY";
+            if (onHandmadePrj == 1 && onHandmadeBom1Prj == 1){
+              statusBom1 = "ON";
+            } else {
+              statusBom1 = "OFF"
+            }
+            if (onHandmadePrj == 1 && onHandmadeBom2Prj == 1){
+              statusBom2 ="ON";
+            } else {
+              statusBom2 ="OFF";
+            }
+            arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", Chế độ:" + statusmode +  ", Trạng thái cửa xả 1:" + statusBom1 + ",Trạng thái cửa xả 2:" + statusBom2 + " " + "Mực nước: " + mucNuoc;
+         }
+      // if ((onAutoPrj == 1 && onAutoBom1Prj == 1) || (onHandmadePrj == 1 && onHandmadeBom1Prj == 1)) {
+      //   statusBom1 = "ON";
+      // } else {
+      //   statusBom1 = "OFF";
+      // }
+      // if ((onAutoPrj == 1 && onAutoBom2Prj == 1) || (onHandmadePrj == 1 && onHandmadeBom2Prj == 1)){
+      //   statusBom2 ="ON";
+      // } else {
+      //   statusBom2 = "OFF";
+      // }
+      // arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", Trạng thái cửa xả 1:" + statusBom1 + ",Trạng thái cửa xả 2:" + statusBom2 + " " + "Mực nước: " + mucNuoc;
     } else {
       let status = "OFF";
-      arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", " + "Mực nước: " + mucNuoc;
+      arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status ;
     }
     var textnode_1 = document.createTextNode(arr_display_1);
     var lb_1 = document.createElement("br");
