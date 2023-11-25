@@ -7,11 +7,11 @@ let CM3_34;
 
 let startPrj = localStorage.getItem("startProject") ? localStorage.getItem("startProject") : 0;
 let onAutoPrj = localStorage.getItem("onAuto") ? localStorage.getItem("onAuto") : 0;
-let onAutoBom1Prj = localStorage.getItem("onAutoBom1") ? localStorage.getItem("onAutoBom1") : 0;
-let onAutoBom2Prj = localStorage.getItem("onAutoBom2") ? localStorage.getItem("onAutoBom2") : 0;
+let onAutoCuaxa1Prj = localStorage.getItem("onAutoCuaxa1") ? localStorage.getItem("onAutoCuaxa1") : 0;
+let onAutoCuaxa2Prj = localStorage.getItem("onAutoCuaxa2") ? localStorage.getItem("onAutoCuaxa2") : 0;
 let onHandmadePrj = localStorage.getItem("onHandmade") ? localStorage.getItem("onHandmade") : 0;
-let onHandmadeBom1Prj = localStorage.getItem("onHandmadeBom1") ? localStorage.getItem("onHandmadeBom1") : 0;
-let onHandmadeBom2Prj = localStorage.getItem("onHandmadeBom2") ? localStorage.getItem("onHandmadeBom2") : 0;
+let onHandmadeCuaxa1Prj = localStorage.getItem("onHandmadeCuaxa1") ? localStorage.getItem("onHandmadeCuaxa1") : 0;
+let onHandmadeCuaxa2Prj = localStorage.getItem("onHandmadeCuaxa2") ? localStorage.getItem("onHandmadeCuaxa2") : 0;
 
 $(document).ready(function() {
     // // doi mau nut start khi bat chuong trinh 
@@ -29,14 +29,14 @@ $(document).ready(function() {
         $("#btn_auto").css("background-color", "green");
     }
 
-    // doi mau nut auto bom 1
-    if (startPrj == 1 && onAutoPrj == 1 && onAutoBom1Prj == 1) {
-        $("#btn_auto_bom1").css("background-color", "green");
+    // doi mau nut auto Cuaxa 1
+    if (startPrj == 1 && onAutoPrj == 1 && onAutoCuaxa1Prj == 1) {
+        $("#btn_auto_Cuaxa1").css("background-color", "green");
     }
 
-    // doi mau nut auto bom 2
-    if (startPrj == 1 && onAutoPrj == 1 && onAutoBom2Prj == 1) {
-        $("#btn_auto_bom2").css("background-color", "green");
+    // doi mau nut auto Cuaxa 2
+    if (startPrj == 1 && onAutoPrj == 1 && onAutoCuaxa2Prj == 1) {
+        $("#btn_auto_Cuaxa2").css("background-color", "green");
     }
 
     // doi mau nut che do tay 
@@ -44,24 +44,24 @@ $(document).ready(function() {
         $("#btn_tay").css("background-color", "green");
     }
 
-    //doi mau che che do bat tay bom 1
-    if (startPrj == 1 && onHandmadePrj == 1 && onHandmadeBom1Prj == 1) {
-        $("#btn_tay_bat_bom1").css("background-color", "green");
+    //doi mau che che do bat tay Cuaxa 1
+    if (startPrj == 1 && onHandmadePrj == 1 && onHandmadeCuaxa1Prj == 1) {
+        $("#btn_tay_bat_Cuaxa1").css("background-color", "green");
     }
     
-    //doi mau che che do tat tay bom 1
-    if (startPrj == 1 && onHandmadePrj == 1 && onHandmadeBom1Prj == 0) {
-        $("#btn_tay_tat_bom1").css("background-color", "green");
+    //doi mau che che do tat tay Cuaxa 1
+    if (startPrj == 1 && onHandmadePrj == 1 && onHandmadeCuaxa1Prj == 0) {
+        $("#btn_tay_tat_Cuaxa1").css("background-color", "green");
     }
 
-    //doi mau che che do bat tay bom 2
-    if (startPrj == 1 && onHandmadePrj == 1 && onHandmadeBom2Prj == 1) {
-        $("#btn_tay_bat_bom2").css("background-color", "green");
+    //doi mau che che do bat tay Cuaxa 2
+    if (startPrj == 1 && onHandmadePrj == 1 && onHandmadeCuaxa2Prj == 1) {
+        $("#btn_tay_bat_Cuaxa2").css("background-color", "green");
     }
 
-    //doi mau che che do tat tay bom 2
-    if (startPrj == 1 && onHandmadePrj == 1 && onHandmadeBom2Prj == 0) {
-        $("#btn_tay_tat_bom2").css("background-color", "green");
+    //doi mau che che do tat tay Cuaxa 2
+    if (startPrj == 1 && onHandmadePrj == 1 && onHandmadeCuaxa2Prj == 0) {
+        $("#btn_tay_tat_Cuaxa2").css("background-color", "green");
     }
 });
 
@@ -125,7 +125,7 @@ function onAuto() {
     $.post(ulr, sdata, function(result2){});
 }
 
-function onAutoBom1() {
+function onAutoCuaxa1() {
     ulr = 'post_data.html';
     sdata = encodeURI('"CM3_34"')+'=0';
     sdata += '&' + encodeURI('"CM3_12"')+'=1';
@@ -133,7 +133,7 @@ function onAutoBom1() {
     $.post(ulr, sdata, function(result2){});
 }
 
-function onAutoBom2() {
+function onAutoCuaxa2() {
     ulr = 'post_data.html';
     sdata = encodeURI('"CM3_12"')+'=0';
     sdata += '&' + encodeURI('"CM3_34"')+'=1';
@@ -153,28 +153,28 @@ function onHandmade() {
     $.post(ulr, sdata, function(result2){});
 }
 
-function onHandmadeBom1() {
+function onHandmadeCuaxa1() {
     ulr = 'post_data.html';
     sdata = encodeURI('"1ND"')+'=1';
     sdata += '&' + encodeURI('"1NC"')+'=0';
     $.post(ulr, sdata, function(result2){});
 }
 
-function offHandmadeBom1() {
+function offHandmadeCuaxa1() {
     ulr = 'post_data.html';
     sdata = encodeURI('"1NC"')+'=1';
     sdata += '&' + encodeURI('"1ND"')+'=0';
     $.post(ulr, sdata, function(result2){});
 }
 
-function onHandmadeBom2() {
+function onHandmadeCuaxa2() {
     ulr = 'post_data.html';
     sdata = encodeURI('"2ND"')+'=1';
     sdata += '&' + encodeURI('"2NC"')+'=0';
     $.post(ulr, sdata, function(result2){});
 }
 
-function offHandmadeBom2() {
+function offHandmadeCuaxa2() {
     ulr = 'post_data.html';
     sdata = encodeURI('"2NC"')+'=1';
     sdata += '&' + encodeURI('"2ND"')+'=0';
