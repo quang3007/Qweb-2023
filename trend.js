@@ -75,6 +75,8 @@ function report_display() {
       let status = "OFF";
       arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status ;
     }
+
+    
     var textnode_1 = document.createTextNode(arr_display_1);
     var lb_1 = document.createElement("br");
     text_1.appendChild(textnode_1);

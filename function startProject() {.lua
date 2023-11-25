@@ -16,19 +16,19 @@ function onHandmade() {
     localStorage.setItem("onHandmade", 1);
 }
 
-function onAutoBom1() {
-    localStorage.setItem("onAutoBom1", 1);
+function onAutoCuaxa1() {
+    localStorage.setItem("onAutoCuaxa1", 1);
     localStorage.setItem("onAutoBom2", 0);
 }
 
 function onAutoBom2() {
-    localStorage.setItem("onAutoBom1", 0);
+    localStorage.setItem("onAutoCuaxa1", 0);
     localStorage.setItem("onAutoBom2", 1);
 }
 
 localStorage.setItem("startProject", 0);
 localStorage.setItem("onAuto", 0);
-localStorage.setItem("onAutoBom1", 0);
+localStorage.setItem("onAutoCuaxa1", 0);
 localStorage.setItem("onAutoBom2", 0);
 localStorage.setItem("onHandmade", 0);
 localStorage.setItem("onHandmadeBom1", 0);

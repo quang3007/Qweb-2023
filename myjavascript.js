@@ -67,7 +67,7 @@ $(document).ready(function() {
 
 // Hàm chức năng đọc giá trị tag
 function IOField(ObjectID, tag) {
-    url = "io.html";
+    url = "get_data.html";
     $.getJSON(url, function (result) {
         document.getElementById(ObjectID).value = result[tag];
     });
@@ -79,50 +79,104 @@ setInterval(function () {
 }, 1000);
 
 function startProject() {
-    localStorage.clear();
-    localStorage.setItem("startProject", 1);
+    // localStorage.clear();
+    // localStorage.setItem("startProject", 1);
+
+    ulr = 'post_data.html';
+    sdata = encodeURI('"START"')+'=1';
+    sdata += '&' + encodeURI('"STOP"')+'=0';
+    sdata += '&' + encodeURI('"CM1_12"')+'=0';
+    sdata += '&' + encodeURI('"CM_34"')+'=0';
+    sdata += '&' + encodeURI('"M"')+'=0';
+    sdata += '&' + encodeURI('"1ND"')+'=0';
+    sdata += '&' + encodeURI('"2ND"')+'=0';
+    sdata += '&' + encodeURI('"CM3_12"')+'=0';
+    sdata += '&' + encodeURI('"CM_34"')+'=0';
+    $.post(ulr, sdata, function(result2){});
 }
 
 function stopProject() {
-    localStorage.clear();
+    //localStorage.clear();
+    ulr = 'post_data.html';
+    sdata = encodeURI('"STOP"')+'=1';
+    sdata += '&' + encodeURI('"START"')+'=0';
+    sdata += '&' + encodeURI('"CM1_12"')+'=0';
+    sdata += '&' + encodeURI('"CM_34"')+'=0';
+    sdata += '&' + encodeURI('"M"')+'=0';
+    sdata += '&' + encodeURI('"1ND"')+'=0';
+    sdata += '&' + encodeURI('"2ND"')+'=0';
+    sdata += '&' + encodeURI('"CM3_12"')+'=0';
+    sdata += '&' + encodeURI('"CM3_34"')+'=0';
+    $.post(ulr, sdata, function(result2){});
 }
 
+
+
+
 function onAuto() {
-    localStorage.setItem("onAuto", 1);
-    localStorage.setItem("onAutoBom1", 0);
-    localStorage.setItem("onAutoBom2", 0);
-    localStorage.setItem("onHandmade", 0);
+    ulr = 'post_data.html';
+    sdata = encodeURI('"CM1_34"')+'=1';
+    sdata += '&' + encodeURI('"CM1_12"')+'=0';
+    sdata += '&' + encodeURI('"CM3_12"')+'=0';
+    sdata += '&' + encodeURI('"CM3_34"')+'=0';
+    sdata += '&' + encodeURI('"1ND"')+'=0';
+    sdata += '&' + encodeURI('"2ND"')+'=0';
+    sdata += '&' + encodeURI('"M"')+'=0';
+    $.post(ulr, sdata, function(result2){});
 }
 
 function onAutoBom1() {
-    localStorage.setItem("onAutoBom1", 1);
-    localStorage.setItem("onAutoBom2", 0);
+    ulr = 'post_data.html';
+    sdata = encodeURI('"CM3_34"')+'=0';
+    sdata += '&' + encodeURI('"CM3_12"')+'=1';
+    sdata += '&' + encodeURI('"M"')+'=1';
+    $.post(ulr, sdata, function(result2){});
 }
 
 function onAutoBom2() {
-    localStorage.setItem("onAutoBom1", 0);
-    localStorage.setItem("onAutoBom2", 1);
+    ulr = 'post_data.html';
+    sdata = encodeURI('"CM3_12"')+'=0';
+    sdata += '&' + encodeURI('"CM3_34"')+'=1';
+    sdata += '&' + encodeURI('"M"')+'=1';
+    $.post(ulr, sdata, function(result2){});
 }
 
 function onHandmade() {
-    localStorage.setItem("onAuto", 0);
-    localStorage.setItem("onHandmade", 1);
-    localStorage.setItem("onHandmadeBom1", 0);
-    localStorage.setItem("onHandmadeBom2", 0);
+    ulr = 'post_data.html';
+    sdata = encodeURI('"CM1_12"')+'=1';
+    sdata += '&' + encodeURI('"CM1_34"')+'=0';
+    sdata += '&' + encodeURI('"1NC"')+'=1';
+    sdata += '&' + encodeURI('"2NC"')+'=1';
+    sdata += '&' + encodeURI('"1ND"')+'=0';
+    sdata += '&' + encodeURI('"2ND"')+'=0';
+    sdata += '&' + encodeURI('"M"')+'=0';
+    $.post(ulr, sdata, function(result2){});
 }
 
 function onHandmadeBom1() {
-    localStorage.setItem("onHandmadeBom1", 1);
+    ulr = 'post_data.html';
+    sdata = encodeURI('"1ND"')+'=1';
+    sdata += '&' + encodeURI('"1NC"')+'=0';
+    $.post(ulr, sdata, function(result2){});
 }
 
 function offHandmadeBom1() {
-    localStorage.setItem("onHandmadeBom1", 0);
+    ulr = 'post_data.html';
+    sdata = encodeURI('"1NC"')+'=1';
+    sdata += '&' + encodeURI('"1ND"')+'=0';
+    $.post(ulr, sdata, function(result2){});
 }
 
 function onHandmadeBom2() {
-    localStorage.setItem("onHandmadeBom2", 1);
+    ulr = 'post_data.html';
+    sdata = encodeURI('"2ND"')+'=1';
+    sdata += '&' + encodeURI('"2NC"')+'=0';
+    $.post(ulr, sdata, function(result2){});
 }
 
 function offHandmadeBom2() {
-    localStorage.setItem("onHandmadeBom2", 0);
+    ulr = 'post_data.html';
+    sdata = encodeURI('"2NC"')+'=1';
+    sdata += '&' + encodeURI('"2ND"')+'=0';
+    $.post(ulr, sdata, function(result2){});
 }

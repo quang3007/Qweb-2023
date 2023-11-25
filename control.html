@@ -1,25 +1,4 @@
 <!DOCTYPE html>
-<!-- AWP_In_Variable Name='"MUC_NUOC"' -->
-
-<!-- AWP_In_Variable Name='"1NC"' -->
-<!-- AWP_In_Variable Name='"1ND"' -->
-<!-- AWP_In_Variable Name='"CM1_12"' -->
-<!-- AWP_In_Variable Name='"CM1_34"' -->
-<!-- AWP_In_Variable Name='"2NC"' -->
-<!-- AWP_In_Variable Name='"2ND"' -->
-<!-- AWP_In_Variable Name='"CM3_12"' -->
-<!-- AWP_In_Variable Name='"CM3_34"' -->
-
-<!-- AWP_In_Variable Name='"1K"' -->
-<!-- AWP_In_Variable Name='"2K"' -->
-<!-- AWP_In_Variable Name='"D1"' -->
-<!-- AWP_In_Variable Name='"RSC"' -->
-<!-- AWP_In_Variable Name='"HL1"' -->
-<!-- AWP_In_Variable Name='"HL2"' -->
-
-<!-- AWP_In_Variable Name='"START"' -->
-<!-- AWP_In_Variable Name='"STOP"' -->
-<!-- AWP_In_Variable Name='"M"' -->
 
 <html lang="vi">
 <head>
@@ -29,7 +8,6 @@
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="myjavascript.js"></script>
-	
 	<script type="text/javascript">
 		//Web = 1: Control
 		//Web = 2: Trend
@@ -75,7 +53,9 @@
 
 	<div class="control-switch container" style="background-color: #f2f2f2;">
 		<div class="column">
-			<form >
+			<!-- <input type="submit" id="btn_start" class="button" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()" value="START_input">  -->
+
+			<!-- <form >
 				<div id="control-table" style="text-align: center;">
 					<input type="submit" id="btn_start" class="button" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()" value="START"> 
 					<input type="hidden" name='"START"' value ="1">
@@ -88,10 +68,11 @@
 					<input type="hidden" name='"CM1_34"' value ="0">
 					<input type="hidden" name='"M"' value ="0">
 				</div>
-			</form>			 
+			</form>			  -->
+			<button class="button" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()">START_BTN</button>
 		</div>
 		<div class="column">
-			<form>
+			<!-- <form>
 				<div id="control-table">
 					<input type="submit" id="btn_stop" class="button" style="width: 90%;background-color:#aa8585" onmousedown="stopProject()" value="STOP">
 					<input type="hidden" name='"START"' value ="0">
@@ -104,7 +85,8 @@
 					<input type="hidden" name='"CM1_34"' value ="0">
 					<input type="hidden" name='"M"' value ="0">
 				</div>	
-			</form>
+			</form> -->
+			<button class="button" style="width: 90%; background-color:#aa8585" onmousedown="stopProject()">STOP</button>
 		</div>
 	</div>
 	<br>
@@ -112,7 +94,7 @@
 	<div class="container" style="text-align: center;">
 		<div class="column" class="control-water-pump-auto" style="background-color: #f2f2f2;min-height: 285px;width: 48%;margin-right: 13px;">
 			<div class="container">
-				<form style="padding-top: 10px;">
+				<!-- <form style="padding-top: 10px;">
 					<input type="submit" id="btn_auto" class="button" style="width: 60%;font-size: 12px;" onmousedown="onAuto()" value="CHẾ ĐỘ TỰ ĐỘNG">
 					<input type="hidden" name='"CM1_12"' value ="0">
 					<input type="hidden" name='"CM1_34"' value ="1">
@@ -121,59 +103,67 @@
 					<input type="hidden" name='"1ND"' value ="0">
 					<input type="hidden" name='"2ND"' value ="0">
 					<input type="hidden" name='"M"' value ="0">
-				</form>
+				</form> -->
+			<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onAuto()">CHẾ ĐỘ TỰ ĐỘNG</button>
 			</div>
 			<div class="container">
-				<form class="column">
+				<!-- <form class="column">
 					<input type="submit" id="btn_auto_bom1" class="button" style="width: 96%;font-size: 12px;" onmousedown="onAutoBom1()" value="CHỌN CỦA XẢ 1">
 					<input type="hidden" name='"CM3_34"' value ="0">
 					<input type="hidden" name='"CM3_12"' value ="1">
 					<input type="hidden" name='"M"' value ="1">
-				</form>
-				<form class="column">
+				</form> -->
+				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onAutoBom1()">CHỌN CỦA XẢ 1</button>
+				<!-- <form class="column">
 					<input type="submit" id="btn_auto_bom2" class="button" style="width: 96%;font-size: 12px;" onmousedown="onAutoBom2()" value="CHỌN CỬA XẢ 2">
 					<input type="hidden" name='"CM3_12"' value ="0">
 					<input type="hidden" name='"CM3_34"' value ="1">
 					<input type="hidden" name='"M"' value ="1">
-				</form>
+				</form> -->
+				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onAutoBom2()">CHỌN CỦA XẢ 2</button>
 			</div>
 		</div>
 	
 		<div class="column"  class="control-water-pump-auto" style="background-color: #f2f2f2; min-height: 285px;">
 			<div class="container">
-				<form style="padding-top: 10px;">
+				<!-- <form style="padding-top: 10px;">
 					 <input type="submit" id="btn_tay" class="button" style="width: 60%; font-size: 12px;" onmousedown="onHandmade()" value="CHẾ ĐỘ TAY ">
 					 <input type="hidden" name='"CM1_12"' value ="1">
 					 <input type="hidden" name='"CM1_34"' value ="0">
-					 <!-- <input type="hidden" name='"1NC"' value ="1"> -->
-					 <!-- <input type="hidden" name='"2NC"' value ="1"> -->
+					 <input type="hidden" name='"1NC"' value ="1">
+					 <input type="hidden" name='"2NC"' value ="1">
 					 <input type="hidden" name='"1ND"' value ="0">
 					<input type="hidden" name='"2ND"' value ="0">
-					</form>
+					</form> -->
+					<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onHandmade()">CHẾ ĐỘ TAY </button>
 			</div>
 			<div class="container">
-				<form class="column">
+				<!-- <form class="column">
 					<input type="submit" id="btn_tay_bat_bom1" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="onHandmadeBom1()" value="BẬT CHẾ ĐỘ TAY CỬA XẢ 1">
 					<input type="hidden" name='"1ND"' value ="1">
 					<input type="hidden" name='"1NC"' value ="0">
-				</form>
-				<form class="column">
+				</form> -->
+				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onHandmadeBom1()">BẬT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
+				<!-- <form class="column">
 					<input type="submit" id="btn_tay_tat_bom1" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="offHandmadeBom1()" value="TẮT CHẾ ĐỘ TAY CỬA XẢ 1 ">
 					<input type="hidden" name='"1ND"' value ="0">
 					<input type="hidden" name='"1NC"' value ="1">
-				</form>
+				</form> -->
+				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="offHandmadeBom1()">TẮT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
 			</div>
 			<div class="container">
-				<form class="column">
+				<!-- <form class="column">
 					<input type="submit" id="btn_tay_bat_bom2" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="onHandmadeBom2()" value=" BẬT CHẾ ĐỘ TAY CỬA XẢ 2">
 					<input type="hidden" name='"2ND"' value ="1">
 					<input type="hidden" name='"2NC"' value ="0">
-				</form>
-				<form class="column">
+				</form> -->
+				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="offHandmadeBom1()">BẬT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
+				<!-- <form class="column">
 					<input type="submit" id="btn_tay_tat_bom2" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="offHandmadeBom2()"value="TẮT CHẾ ĐỘ TAY CỬA XẢ 2 ">
 					<input type="hidden" name='"2ND"' value ="0">
 					<input type="hidden" name='"2NC"' value ="1">
-				</form>
+				</form> -->
+				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="offHandmadeBom2()">TẮT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
 			</div>
 		</div>
 	</div>
