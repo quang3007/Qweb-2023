@@ -8,7 +8,7 @@ let onHandmadeCuaxa1Prj = localStorage.getItem("onHandmadeCuaxa1") ? localStorag
 let onHandmadeCuaxa2Prj = localStorage.getItem("onHandmadeCuaxa2") ? localStorage.getItem("onHandmadeCuaxa2") : 0;
 // Hàm chức năng đọc giá trị tag
 function IOField(ObjectID, tag) {
-  url = "io.html";
+  url = "get_data.html";
   $.getJSON(url, function (result) {
     document.getElementById(ObjectID).value = result[tag];
   });
