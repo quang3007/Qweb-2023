@@ -69,7 +69,7 @@
 					<input type="hidden" name='"M"' value ="0">
 				</div>
 			</form>			  -->
-			<button class="button" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()">START_BTN</button>
+			<button class="button" id="btn_start" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()">START</button>
 		</div>
 		<div class="column">
 			<!-- <form>
@@ -86,7 +86,7 @@
 					<input type="hidden" name='"M"' value ="0">
 				</div>	
 			</form> -->
-			<button class="button" style="width: 90%; background-color:#aa8585" onmousedown="stopProject()">STOP</button>
+			<button class="button" id="btn_stop" style="width: 90%; background-color:#aa8585" onmousedown="stopProject()">STOP</button>
 		</div>
 	</div>
 	<br>
@@ -104,7 +104,7 @@
 					<input type="hidden" name='"2ND"' value ="0">
 					<input type="hidden" name='"M"' value ="0">
 				</form> -->
-			<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onAuto()">CHẾ ĐỘ TỰ ĐỘNG</button>
+			<button class="button" id="btn_auto" style="width: 60%;font-size: 12px;" onmousedown="onAuto()">CHẾ ĐỘ TỰ ĐỘNG</button>
 			</div>
 			<div class="container">
 				<!-- <form class="column">
@@ -113,14 +113,18 @@
 					<input type="hidden" name='"CM3_12"' value ="1">
 					<input type="hidden" name='"M"' value ="1">
 				</form> -->
-				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onAutoCuaxa1()">CHỌN CỬA XẢ 1</button>
+				<div class="column">
+					<button class="button" id="btn_auto_Cuaxa1" style="font-size: 12px;" onmousedown="onAutoCuaxa1()">CHỌN CỬA XẢ 1</button>
+				</div>
+				<div class="column">
+					<button class="button" id="btn_auto_Cuaxa2" style="font-size: 12px;" onmousedown="onAutoCuaxa2()">CHỌN CỬA XẢ 2</button>
+				</div>
 				<!-- <form class="column">
 					<input type="submit" id="btn_auto_Cuaxa2" class="button" style="width: 96%;font-size: 12px;" onmousedown="onAutoCuaxa2()" value="CHỌN CỬA XẢ 2">
 					<input type="hidden" name='"CM3_12"' value ="0">
 					<input type="hidden" name='"CM3_34"' value ="1">
 					<input type="hidden" name='"M"' value ="1">
 				</form> -->
-				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onAutoCuaxa2()">CHỌN CỬA XẢ 2</button>
 			</div>
 		</div>
 	
@@ -135,7 +139,7 @@
 					 <input type="hidden" name='"1ND"' value ="0">
 					<input type="hidden" name='"2ND"' value ="0">
 					</form> -->
-					<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onHandmade()">CHẾ ĐỘ TAY </button>
+					<button class="button" id="btn_tay" style="width: 60%;font-size: 12px;" onmousedown="onHandmade()">CHẾ ĐỘ TAY </button>
 			</div>
 			<div class="container">
 				<!-- <form class="column">
@@ -143,13 +147,17 @@
 					<input type="hidden" name='"1ND"' value ="1">
 					<input type="hidden" name='"1NC"' value ="0">
 				</form> -->
-				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onHandmadeCuaxa1()">BẬT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
+				<div class="column">
+					<button class="button" id="btn_tay_bat_Cuaxa1" style="font-size: 12px;" onmousedown="onHandmadeCuaxa1()">BẬT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
+				</div>
 				<!-- <form class="column">
 					<input type="submit" id="btn_tay_tat_Cuaxa1" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="offHandmadeCuaxa1()" value="TẮT CHẾ ĐỘ TAY CỬA XẢ 1 ">
 					<input type="hidden" name='"1ND"' value ="0">
 					<input type="hidden" name='"1NC"' value ="1">
 				</form> -->
-				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="offHandmadeCuaxa1()">TẮT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
+				<div class="column">
+					<button class="button" id="btn_tay_tat_Cuaxa1" style="font-size: 12px;" onmousedown="offHandmadeCuaxa1()">TẮT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
+				</div>
 			</div>
 			<div class="container">
 				<!-- <form class="column">
@@ -157,13 +165,17 @@
 					<input type="hidden" name='"2ND"' value ="1">
 					<input type="hidden" name='"2NC"' value ="0">
 				</form> -->
-				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="onHandmadeCuaxa2()">BẬT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
+				<div class="column">
+					<button class="button" id="btn_tay_bat_Cuaxa2" style="font-size: 12px;" onmousedown="onHandmadeCuaxa2()">BẬT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
+				</div>
 				<!-- <form class="column">
 					<input type="submit" id="btn_tay_tat_Cuaxa2" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="offHandmadeCuaxa2()"value="TẮT CHẾ ĐỘ TAY CỬA XẢ 2 ">
 					<input type="hidden" name='"2ND"' value ="0">
 					<input type="hidden" name='"2NC"' value ="1">
 				</form> -->
-				<button class="button" style="width: 60%;font-size: 12px;" onmousedown="offHandmadeCuaxa2()">TẮT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
+				<div class="column">
+					<button class="button" id="btn_tay_tat_Cuaxa2" style="font-size: 12px;" onmousedown="offHandmadeCuaxa2()">TẮT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
+				</div>
 			</div>
 		</div>
 	</div>
