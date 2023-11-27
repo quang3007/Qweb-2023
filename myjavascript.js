@@ -95,10 +95,41 @@ function IOField(ObjectID, tag) {
         document.getElementById(ObjectID).value = result[tag];
     });
 }
-
 // HIỂN THỊ DỮ LIỆU LÊN IO FIELD
 setInterval(function () {
-    IOField("quang", "MUC_NUOC"); 
+    IOField("quang", "MUC_NUOC");
+}, 1000);
+
+// xu ly den tin hieu
+setInterval(function () {
+
+    url = "get_data.html";
+    $.getJSON(url, function (result) {
+        let K1 = result['K1'];
+        let K2 = result['K2'];
+        let D1 = result['D1'];
+        // console.log('K1: ' + K1);
+        // console.log('K2: ' + K2);
+        // console.log('D1: ' + D1);
+
+        if (K1 == 1) {
+            $(".signal_lights_k1" ).css("background-color", "green");
+        } else {
+            $(".signal_lights_k1" ).css("background-color", "rgb(85, 68, 63)");
+        }
+
+        if (K2 == 1) {
+            $(".signal_lights_k2" ).css("background-color", "green");
+        } else {
+            $(".signal_lights_k2" ).css("background-color", "rgb(85, 68, 63)");
+        }
+
+        if (D1 == 1) {
+            $(".signal_lights_for_water" ).css("background-color", "red");
+        } else {
+            $(".signal_lights_for_water" ).css("background-color", "rgb(85, 68, 63)");
+        }
+    });
 }, 1000);
 
 function startProject() {

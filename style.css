@@ -282,13 +282,14 @@ input[type=text]:focus {
 // 						Ve duong tron START/STOP
 //---------------------------------------------------------------------------- */
 
-#Lamp_Display {
+.signal_lights {
 width: 100px;
 height: 100px;
-margin-left: 80px;
-/* background: red;  */
+/* margin-left: 80px; */
+background: rgb(85, 68, 63);; 
 -moz-border-radius: 50px;
 -webkit-border-radius: 50px;
 border-radius: 50px;
 }
+
 

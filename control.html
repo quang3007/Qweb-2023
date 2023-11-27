@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="vi">
+
 <head>
 	<title>ĐỒ ÁN 2023</title>
 	<meta charset="UTF-8">
@@ -13,49 +14,51 @@
 		//Web = 2: Trend
 		web_current = 1;
 	</script>
-		
-	
+
+
 </head>
 
-<body >
+<body>
 	<div id="main">
-	    <div id="head">
+		<div id="head">
 			<div id="head_logo">
-				
+
 				<img src="logo.png" style="margin-left: 26px; margin-top: 10px;" />
 			</div>
 
-			<div id="head_text" >
+			<div id="head_text">
 				<h3 style="text-align:center; color:blue;">TRƯỜNG ĐẠI HỌC THỦY LỢI </h3>
 				<h2 style="text-align:center; color:blue;">ĐỒ ÁN TỐT NGHIỆP </h2>
 				<h1 style="text-align:center; color:red;">NGHIÊN CỨU HỆ THỐNG ĐẬP THỦY LỢI ỨNG DỤNG CÔNG NGHỆ IOT</h1>
-				<h3 style="text-align:center; color:green;">GVHD: NGÔ QUANG VĨ    -   SVTH: NGUYỄN HỒNG QUANG-1951212003 </h3>
-				
+				<h3 style="text-align:center; color:green;">GVHD: NGÔ QUANG VĨ - SVTH: NGUYỄN HỒNG QUANG-1951212003
+				</h3>
+
 			</div>
 
 		</div>
-		
-	    <div id="head-link">
-	    	  <ul>
-			    <li><a href="index.html">HOME</a></li>
-			    <li><a href="#" style="color:yellow">CONTROL</a></li>
-			    <li><a href="trend.html">TREND</a></li>
-			    <li><a href="report.html">REPORT</a></li>
-			    <li><a href="help.html">HELP</a></li>
-			  </ul>
+
+		<div id="head-link">
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="#" style="color:yellow">CONTROL</a></li>
+				<li><a href="trend.html">TREND</a></li>
+				<li><a href="report.html">REPORT</a></li>
+				<li><a href="help.html">HELP</a></li>
+			</ul>
 		</div>
-	    
- <div id="content">
-	<div class="show-water-level" style="text-align: center;">
-		<p style="margin: 4px 0px 2px 0px;"> Mức nước:</p>
-		<input style= "text-align: center; width: 80%; color:blue;"; id="quang" disabled="disabled" type="text" />
-	</div>
 
-	<div class="control-switch container" style="background-color: #f2f2f2;">
-		<div class="column">
-			<!-- <input type="submit" id="btn_start" class="button" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()" value="START_input">  -->
+		<div id="content">
+			<div class="show-water-level" style="text-align: center;">
+				<p style="margin: 4px 0px 2px 0px;"> Mức nước:</p>
+				<input style="text-align: center; width: 80%; color:blue;" ; id="quang" disabled="disabled"
+					type="text" />
+			</div>
 
-			<!-- <form >
+			<div class="control-switch container" style="background-color: #f2f2f2;">
+				<div class="column">
+					<!-- <input type="submit" id="btn_start" class="button" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()" value="START_input">  -->
+
+					<!-- <form >
 				<div id="control-table" style="text-align: center;">
 					<input type="submit" id="btn_start" class="button" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()" value="START"> 
 					<input type="hidden" name='"START"' value ="1">
@@ -69,10 +72,11 @@
 					<input type="hidden" name='"M"' value ="0">
 				</div>
 			</form>			  -->
-			<button class="button" id="btn_start" style="width: 90%; background-color:#aad7aa" onmousedown="startProject()">START</button>
-		</div>
-		<div class="column">
-			<!-- <form>
+					<button class="button" id="btn_start" style="width: 90%; background-color:#aad7aa"
+						onmousedown="startProject()">START</button>
+				</div>
+				<div class="column">
+					<!-- <form>
 				<div id="control-table">
 					<input type="submit" id="btn_stop" class="button" style="width: 90%;background-color:#aa8585" onmousedown="stopProject()" value="STOP">
 					<input type="hidden" name='"START"' value ="0">
@@ -86,15 +90,17 @@
 					<input type="hidden" name='"M"' value ="0">
 				</div>	
 			</form> -->
-			<button class="button" id="btn_stop" style="width: 90%; background-color:#aa8585" onmousedown="stopProject()">STOP</button>
-		</div>
-	</div>
-	<br>
+					<button class="button" id="btn_stop" style="width: 90%; background-color:#aa8585"
+						onmousedown="stopProject()">STOP</button>
+				</div>
+			</div>
+			<br>
 
-	<div class="container" style="text-align: center;">
-		<div class="column" class="control-water-pump-auto" style="background-color: #f2f2f2;min-height: 285px;width: 48%;margin-right: 13px;">
-			<div class="container">
-				<!-- <form style="padding-top: 10px;">
+			<div class="container" style="text-align: center;">
+				<div class="column" class="control-water-pump-auto"
+					style="background-color: #f2f2f2;min-height: 285px;width: 48%;margin-right: 13px;">
+					<div class="container">
+						<!-- <form style="padding-top: 10px;">
 					<input type="submit" id="btn_auto" class="button" style="width: 60%;font-size: 12px;" onmousedown="onAuto()" value="CHẾ ĐỘ TỰ ĐỘNG">
 					<input type="hidden" name='"CM1_12"' value ="0">
 					<input type="hidden" name='"CM1_34"' value ="1">
@@ -104,33 +110,37 @@
 					<input type="hidden" name='"2ND"' value ="0">
 					<input type="hidden" name='"M"' value ="0">
 				</form> -->
-			<button class="button" id="btn_auto" style="width: 60%;font-size: 12px;" onmousedown="onAuto()">CHẾ ĐỘ TỰ ĐỘNG</button>
-			</div>
-			<div class="container">
-				<!-- <form class="column">
+						<button class="button" id="btn_auto" style="width: 60%;font-size: 12px;"
+							onmousedown="onAuto()">CHẾ ĐỘ TỰ ĐỘNG</button>
+					</div>
+					<div class="container">
+						<!-- <form class="column">
 					<input type="submit" id="btn_auto_Cuaxa1" class="button" style="width: 96%;font-size: 12px;" onmousedown="onAutoCuaxa1()" value="CHỌN CỦA XẢ 1">
 					<input type="hidden" name='"CM3_34"' value ="0">
 					<input type="hidden" name='"CM3_12"' value ="1">
 					<input type="hidden" name='"M"' value ="1">
 				</form> -->
-				<div class="column">
-					<button class="button" id="btn_auto_Cuaxa1" style="font-size: 12px;" onmousedown="onAutoCuaxa1()">CHỌN CỬA XẢ 1</button>
-				</div>
-				<div class="column">
-					<button class="button" id="btn_auto_Cuaxa2" style="font-size: 12px;" onmousedown="onAutoCuaxa2()">CHỌN CỬA XẢ 2</button>
-				</div>
-				<!-- <form class="column">
+						<div class="column">
+							<button class="button" id="btn_auto_Cuaxa1" style="font-size: 12px;"
+								onmousedown="onAutoCuaxa1()">CHỌN CỬA XẢ 1</button>
+						</div>
+						<div class="column">
+							<button class="button" id="btn_auto_Cuaxa2" style="font-size: 12px;"
+								onmousedown="onAutoCuaxa2()">CHỌN CỬA XẢ 2</button>
+						</div>
+						<!-- <form class="column">
 					<input type="submit" id="btn_auto_Cuaxa2" class="button" style="width: 96%;font-size: 12px;" onmousedown="onAutoCuaxa2()" value="CHỌN CỬA XẢ 2">
 					<input type="hidden" name='"CM3_12"' value ="0">
 					<input type="hidden" name='"CM3_34"' value ="1">
 					<input type="hidden" name='"M"' value ="1">
 				</form> -->
-			</div>
-		</div>
-	
-		<div class="column"  class="control-water-pump-auto" style="background-color: #f2f2f2; min-height: 285px;">
-			<div class="container">
-				<!-- <form style="padding-top: 10px;">
+					</div>
+				</div>
+
+				<div class="column" class="control-water-pump-auto"
+					style="background-color: #f2f2f2; min-height: 285px;">
+					<div class="container">
+						<!-- <form style="padding-top: 10px;">
 					 <input type="submit" id="btn_tay" class="button" style="width: 60%; font-size: 12px;" onmousedown="onHandmade()" value="CHẾ ĐỘ TAY ">
 					 <input type="hidden" name='"CM1_12"' value ="1">
 					 <input type="hidden" name='"CM1_34"' value ="0">
@@ -139,79 +149,108 @@
 					 <input type="hidden" name='"1ND"' value ="0">
 					<input type="hidden" name='"2ND"' value ="0">
 					</form> -->
-					<button class="button" id="btn_tay" style="width: 60%;font-size: 12px;" onmousedown="onHandmade()">CHẾ ĐỘ TAY </button>
-			</div>
-			<div class="container">
-				<!-- <form class="column">
+						<button class="button" id="btn_tay" style="width: 60%;font-size: 12px;"
+							onmousedown="onHandmade()">CHẾ ĐỘ TAY </button>
+					</div>
+					<div class="container">
+						<!-- <form class="column">
 					<input type="submit" id="btn_tay_bat_Cuaxa1" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="onHandmadeCuaxa1()" value="BẬT CHẾ ĐỘ TAY CỬA XẢ 1">
 					<input type="hidden" name='"1ND"' value ="1">
 					<input type="hidden" name='"1NC"' value ="0">
 				</form> -->
-				<div class="column">
-					<button class="button" id="btn_tay_bat_Cuaxa1" style="font-size: 12px;" onmousedown="onHandmadeCuaxa1()">BẬT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
-				</div>
-				<!-- <form class="column">
+						<div class="column">
+							<button class="button" id="btn_tay_bat_Cuaxa1" style="font-size: 12px;"
+								onmousedown="onHandmadeCuaxa1()">BẬT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
+						</div>
+						<!-- <form class="column">
 					<input type="submit" id="btn_tay_tat_Cuaxa1" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="offHandmadeCuaxa1()" value="TẮT CHẾ ĐỘ TAY CỬA XẢ 1 ">
 					<input type="hidden" name='"1ND"' value ="0">
 					<input type="hidden" name='"1NC"' value ="1">
 				</form> -->
-				<div class="column">
-					<button class="button" id="btn_tay_tat_Cuaxa1" style="font-size: 12px;" onmousedown="offHandmadeCuaxa1()">TẮT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
-				</div>
-			</div>
-			<div class="container">
-				<!-- <form class="column">
+						<div class="column">
+							<button class="button" id="btn_tay_tat_Cuaxa1" style="font-size: 12px;"
+								onmousedown="offHandmadeCuaxa1()">TẮT CHẾ ĐỘ TAY CỬA XẢ 1 </button>
+						</div>
+					</div>
+					<div class="container">
+						<!-- <form class="column">
 					<input type="submit" id="btn_tay_bat_Cuaxa2" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="onHandmadeCuaxa2()" value=" BẬT CHẾ ĐỘ TAY CỬA XẢ 2">
 					<input type="hidden" name='"2ND"' value ="1">
 					<input type="hidden" name='"2NC"' value ="0">
 				</form> -->
-				<div class="column">
-					<button class="button" id="btn_tay_bat_Cuaxa2" style="font-size: 12px;" onmousedown="onHandmadeCuaxa2()">BẬT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
-				</div>
-				<!-- <form class="column">
+						<div class="column">
+							<button class="button" id="btn_tay_bat_Cuaxa2" style="font-size: 12px;"
+								onmousedown="onHandmadeCuaxa2()">BẬT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
+						</div>
+						<!-- <form class="column">
 					<input type="submit" id="btn_tay_tat_Cuaxa2" class="button" style="width: 100%;font-size: 12px; white-space: normal; word-wrap: break-word;" onmousedown="offHandmadeCuaxa2()"value="TẮT CHẾ ĐỘ TAY CỬA XẢ 2 ">
 					<input type="hidden" name='"2ND"' value ="0">
 					<input type="hidden" name='"2NC"' value ="1">
 				</form> -->
-				<div class="column">
-					<button class="button" id="btn_tay_tat_Cuaxa2" style="font-size: 12px;" onmousedown="offHandmadeCuaxa2()">TẮT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
+						<div class="column">
+							<button class="button" id="btn_tay_tat_Cuaxa2" style="font-size: 12px;"
+								onmousedown="offHandmadeCuaxa2()">TẮT CHẾ ĐỘ TAY CỬA XẢ 2 </button>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	
+
+
+			<div class="container">
+				<div class="column">
+					<div class="container">
+						<div class="column" style=" text-align: -webkit-center; ">
+							<div class="signal_lights signal_lights_k1"></div>
+							<p>Cửa Xả 1</p>
+						</div>
+						<div class="column" style=" text-align: -webkit-center; ">
+							<div class="signal_lights signal_lights_k2"></div>
+							<p>Cửa Xả 2</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="container">
+						<div class="column" style=" text-align: -webkit-center; ">
+							<div class="signal_lights signal_lights_for_water"></div>
+							<p>Cảnh Báo</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<marquee> ĐỒ ÁN TỐT NGHIỆP - NGUYỄN HỒNG QUANG - 1951212003 </marquee>
-	
-	    </div>
-	    <div id="right">
-	    	<H3>Hôm nay:<p id="time" style="text-align:center" ></p></H3>
-	    	<hr>
-	  		<div id="Lamp_Display"></div>
+		</div>
+		<div id="right"  style=" width: 270px; min-height: 675px; border: 1px solid #CDCDCD; float:right; margin-bottom: 5px; padding-left:5px; line-height: 1.5;">
+			<H3>Hôm nay:<p id="time" style="text-align:center"></p>
+			</H3>
 			<hr>
-	    				
-	    	<h4>Hướng dẫn</h4>
-	    	<p>Bước 1: Bắt đầu/kết thúc điều khiển bằng cách nhấn nút START/STOP</p>
-	    	<p>Bước 2: Chọn chế độ làm việc TỰ ĐỘNG/TAY. </p>
-	    	<p>Bước 3: Nếu chọn chế độ TỰ ĐỘNG thì chọn bơm làm việc trước</p>
-	    	<p>Bước 4: Nếu chọn chế độ TAY thì chọn bơm làm việc</p>
+			<div id="Lamp_Display"></div>
+			<hr>
+
+			<h4>Hướng dẫn</h4>
+			<p>Bước 1: Bắt đầu/kết thúc điều khiển bằng cách nhấn nút START/STOP</p>
+			<p>Bước 2: Chọn chế độ làm việc TỰ ĐỘNG/TAY. </p>
+			<p>Bước 3: Nếu chọn chế độ TỰ ĐỘNG thì chọn bơm làm việc trước</p>
+			<p>Bước 4: Nếu chọn chế độ TAY thì chọn bơm làm việc</p>
 			<p>Bước 5: Để xem chi tiết mực nước thay đổi theo dạng đồ thị vui lòng chuyển sang trang TREND </p>
-	    </div>
-	    
-	    <div id="footer">
-            
+		</div>
+
+		<div id="footer">
+
 			<table>
-			  <tr>
-			    <td> NGUYỄN HỒNG QUANG </td>
-			  </tr>
-			<tr>
-				<td>Số điện thoại: 0355-596-329</td>
-			</tr>
-			<tr>
-				<td>Email: nguyenhongquang30072001@gmail.com</td>
-			</tr>
+				  <tr>
+					    <td> NGUYỄN HỒNG QUANG </td>
+					  </tr>
+				<tr>
+					<td>Số điện thoại: 0355-596-329</td>
+				</tr>
+				<tr>
+					<td>Email: nguyenhongquang30072001@gmail.com</td>
+				</tr>
 			</table>
 		</div>
-    </div>
+	</div>
 
 
 </body>
