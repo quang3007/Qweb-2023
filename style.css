@@ -59,7 +59,7 @@ body{
 }
 
 #head-link li {
-      color: #f1f1f1;
+      color: #F1F1F1;
       display: inline-block;
       width: 120px;
       height: 40px;
@@ -136,7 +136,7 @@ input[type=text]:focus {
     border: 3px solid #555;
 }
 
-#control-content-table-1-1{
+/* #control-content-table-1-1{
      width: 47%;
     float: left;
     margin-top: 10px;
@@ -148,13 +148,13 @@ input[type=text]:focus {
      margin-top: 10px;
      margin-right: 10px;
   
- }
+ } */
 
-#control-table {
+/* #control-table {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 10px;
-}
+} */
 
 /* */
 .button {
@@ -218,12 +218,12 @@ input[type=text]:focus {
 }
 
 /* REPORT */
-#report-content-1-1{
+/* #report-content-1-1{
      width: 95%;
      float: left;
     margin-top: 5px;
     margin-left: 5px;
-}
+} */
 /* #report-content-1-2{
      width: 49%;
      float: right;
@@ -236,7 +236,7 @@ input[type=text]:focus {
     background-color: #f2f2f2;
     padding: 5px;
 }
-
+/* 
 #report_right{
      width: 270px;
      min-height: 754px;
@@ -245,7 +245,7 @@ input[type=text]:focus {
      margin-bottom: 5px;
      padding-left:5px;
      line-height: 1.5;
-}
+} */
 
 /* Box styles */
 .myBox {
