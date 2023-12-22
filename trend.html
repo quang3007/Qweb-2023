@@ -7,8 +7,8 @@
 	<title>ĐỒ ÁN 2023</title>
 	<meta charset="UTF-8">
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/jquery.js"></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+	<!-- <script type="text/javascript" src="/jquery.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
 	<script type="text/javascript" src="smoothie.js"></script>
 	
@@ -60,10 +60,10 @@
 				</div>
 			</div>
 
-			<div class="show-water-level" style="text-align: center;">
+			<!-- <div class="show-water-level" style="text-align: center;">
 				<p style="margin: 4px 0px 2px 0px;"> Mức nước:</p>
 				<input style=" width: 80%; " id="quang2222222" disabled="disabled" type="text" />
-			</div>
+			</div> -->
 							
 			<!-- REPORT
 			<div class="container">
@@ -90,17 +90,40 @@
 			<marquee> ĐỒ ÁN TỐT NGHIỆP - NGUYỄN HỒNG QUANG - 1951212003 </marquee>
 
 	    </div>
-	    <div id="right">
-	    	<H3>Hôm nay:<p id="time" style="text-align:center" ></p></H3>
-	    	<hr>
-	    	<div id="Lamp_Display"></div>
-			<hr>
-	    	<h4>Hướng dẫn</h4>
-	    	<p>Bước 1: Bắt đầu/kết thúc điều khiển bằng cách nhấn nút START/STOP</p>
-	    	<p>Bước 2: Để thay đổi chế độ điều khiển vui lòng quay lại trang CONTROL. </p>
-			<p>Bước 3: Xem đồ thị mực nước, sau mỗi giây dữ liệu sẽ cập nhật </p>
-			<p>Bước 4: Để xem chi tiết dữ liệu cập nhật vui lòng chuyển sang trang REPORT </p>
-	    </div>
+		<div id="right"  >
+			
+			<div class="container">
+				<div class="show-water-level" style="text-align: center;">
+					<p style="margin: 4px 0px 2px 0px;"> MỨC NƯỚC:</p>
+					<input style="text-align: center; width: 80%; color:blue;" ; id="quang2222222" disabled="disabled"
+						type="text" />
+				</div>
+				<div class="container">
+						<div class="container">
+							<div class="column" style=" text-align: -webkit-center; ">
+								<div class="show-water-level" style="text-align: center;">
+									<p style="margin: 4px 0px 2px 0px;"> LƯU LƯỢNG CỬA XẢ 1:</p>
+										<input style="text-align: center; width: 100%; color:blue;" ; id="luu_luong_CX1" disabled="disabled" type="text" />
+								</div>
+								<div class="show-water-level" style="text-align: center;">
+									<p style="margin: 4px 0px 2px 0px;"> TỔNG LƯU LƯỢNG CỬA XẢ 1:</p>
+										<input style="text-align: center; width: 100%; color:blue;" ; id="Tong_luu_luong_CX1" disabled="disabled" type="text" />
+								</div>
+							</div>
+						<div class="column" style=" text-align: -webkit-center; ">
+							<div class="show-water-level" style="text-align: center;">
+								<p style="margin: 4px 0px 2px 0px;"> LƯU LƯỢNG CỦA XẢ 2:</p>
+									<input style="text-align: center; width: 100%; color:blue;" ; id="luu_luong_CX2" disabled="disabled" type="text" />
+							</div>
+							<div class="show-water-level" style="text-align: center;">
+								<p style="margin: 4px 0px 2px 0px;"> TỔNG LƯU LƯỢNG CỬA XẢ 2:</p>
+									<input style="text-align: center; width: 100%; color:blue;" ; id="Tong_luu_luong_CX2" disabled="disabled" type="text" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	    
 		<div id="footer">
             

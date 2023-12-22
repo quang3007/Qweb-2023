@@ -17,7 +17,10 @@ function IOField(ObjectID, tag) {
 // HIỂN THỊ DỮ LIỆU LÊN IO FIELD
 setInterval(function () {
   IOField("quang2222222", "MUC_NUOC");
-  IOField("hai", "START");
+    IOField("luu_luong_CX1", "LLCX1");
+    IOField("luu_luong_CX2", "LLCX2");
+    IOField("Tong_luu_luong_CX1", "TONG_LLCX1");
+    IOField("Tong_luu_luong_CX2", "TONG_LLCX2");
 }, 1000);
 
 //Ket thuc khai bao bien toan cuc
@@ -30,7 +33,7 @@ function load_xong() {
 function report_display() {
   var text_1 = document.getElementById("report1");
   setInterval(function () {
-    let mucNuoc = $('#quang').val() ? parseFloat($('#quang').val()) : 0;
+    let mucNuoc = $('#quang2222222').val() ? parseFloat($('#quang2222222').val()) : 0;
     if (startPrj == 1) {
       let status = "ON";
         if ((onAutoPrj == 1 ) && (onHandmadePrj == 0 )){
@@ -106,32 +109,32 @@ function saveExcelFile() {
 }
 
 
-// TAO FILE TXT
-// function saveTextAsFile() {
-//   var textToWrite = $('#report1').html();
-//   var textToWrite = textToWrite.replaceAll('<br>', '\n');
-//   var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
-//   var fileNameToSaveAs = 'REPORT-SCADA_' + thoigian;
-//   var downloadLink = document.createElement("a");
-//   downloadLink.download = fileNameToSaveAs;
-//   downloadLink.innerHTML = "Download File";
-//   if (window.webkitURL !== null) {
-//     // Chrome allows the link to be clicked
-//     // without actually adding it to the DOM.
-//     downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-//   } else {
-//     // Firefox requires the link to be added to the DOM
-//     // before it can be clicked.
-//     downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-//     downloadLink.onclick = destroyClickedElement;
-//     downloadLink.style.display = "none";
-//     document.body.appendChild(downloadLink);
-//   }
-//   downloadLink.click();
-// }
-// function destroyClickedElement(event) {
-//   document.body.removeChild(event.target);
-// }
+//TAO FILE TXT
+function saveTextAsFile() {
+  var textToWrite = $('#report1').html();
+  var textToWrite = textToWrite.replaceAll('<br>', '\n');
+  var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+  var fileNameToSaveAs = 'REPORT-SCADA_' + thoigian;
+  var downloadLink = document.createElement("a");
+  downloadLink.download = fileNameToSaveAs;
+  downloadLink.innerHTML = "Download File";
+  if (window.webkitURL !== null) {
+    // Chrome allows the link to be clicked
+    // without actually adding it to the DOM.
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+  } else {
+    // Firefox requires the link to be added to the DOM
+    // before it can be clicked.
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+  }
+  downloadLink.click();
+}
+function destroyClickedElement(event) {
+  document.body.removeChild(event.target);
+}
 
 //Lay thoi gian thuc
 function gettime() {

@@ -283,8 +283,8 @@ input[type=text]:focus {
 //---------------------------------------------------------------------------- */
 
 .signal_lights {
-width: 100px;
-height: 100px;
+width: 80px;
+height: 80px;
 /* margin-left: 80px; */
 background: rgb(85, 68, 63);; 
 -moz-border-radius: 50px;

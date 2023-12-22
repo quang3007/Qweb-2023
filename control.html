@@ -48,16 +48,37 @@
 		</div>
 
 		<div id="content">
+			<!-- <div class="container">
 			<div class="show-water-level" style="text-align: center;">
-				<p style="margin: 4px 0px 2px 0px;"> Mức nước:</p>
+				<p style="margin: 4px 0px 2px 0px;"> MỨC NƯỚC:</p>
 				<input style="text-align: center; width: 80%; color:blue;" ; id="quang2222222 +cm  " disabled="disabled"
 					type="text" />
 			</div>
-			<div class="show-water-level" style="text-align: center;">
-				<p style="margin: 4px 0px 2px 0px;"> LUU LUONG:</p>
-				<input style="text-align: center; width: 80%; color:blue;" ; id="luu_luong" disabled="disabled"
-					type="text" />
+			<div class="container">
+					<div class="container">
+						<div class="column" style=" text-align: -webkit-center; ">
+							<div class="column" style="text-align: center;">
+								<p style="margin: 4px 0px 2px 0px;"> LƯU LƯỢNG CỬA XẢ 1:</p>
+									<input style="text-align: center; width: 100%; color:blue;" ; id="luu_luong_CX1" disabled="disabled" type="text" />
+							</div>
+							<div class="column" style="text-align: center;">
+								<p style="margin: 4px 0px 2px 0px;"> TỔNG LƯU LƯỢNG CỬA XẢ 1:</p>
+									<input style="text-align: center; width: 100%; color:blue;" ; id="Tong_luu_luong_CX1" disabled="disabled" type="text" />
+							</div>
+						</div>
+					<div class="column" style=" text-align: -webkit-center; ">
+						<div class="column" style="text-align: center;">
+							<p style="margin: 4px 0px 2px 0px;"> LƯU LƯỢNG CỦA XẢ 2:</p>
+								<input style="text-align: center; width: 100%; color:blue;" ; id="luu_luong_CX2" disabled="disabled" type="text" />
+						</div>
+						<div class="column" style="text-align: center;">
+							<p style="margin: 4px 0px 2px 0px;"> TỔNG LƯU LƯỢNG CỬA XẢ 2:</p>
+								<input style="text-align: center; width: 100%; color:blue;" ; id="Tong_luu_luong_CX2" disabled="disabled" type="text" />
+						</div>
+					</div>
+				</div>
 			</div>
+		</div> -->
 
 			<div class="control-switch container" style="background-color: #f2f2f2;">
 				<div class="column">
@@ -205,6 +226,19 @@
 				<div class="column">
 					<div class="container">
 						<div class="column" style=" text-align: -webkit-center; ">
+							<div class="signal_lights signal_lights_ON"></div>
+							<p>Trạng thái</p>
+						</div>
+						<div class="column" style=" text-align: -webkit-center; ">
+							<div class="signal_lights signal_lights_for_water"></div>
+							<p>Cảnh Báo</p>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="container">
+					
+						<div class="column" style=" text-align: -webkit-center; ">
 							<div class="signal_lights signal_lights_k1"></div>
 							<p>Cửa Xả 1</p>
 						</div>
@@ -214,39 +248,48 @@
 						</div>
 					</div>
 				</div>
-				<div class="column">
-					<div class="container">
-						<div class="column" style=" text-align: -webkit-center; ">
-							<div class="signal_lights signal_lights_for_water"></div>
-							<p>Cảnh Báo</p>
-						</div>
-					</div>
-				</div>
 			</div>
 
 			<marquee> ĐỒ ÁN TỐT NGHIỆP - NGUYỄN HỒNG QUANG - 1951212003 </marquee>
 		</div>
-		<div id="right"  style=" width: 270px; min-height: 675px; border: 1px solid #CDCDCD; float:right; margin-bottom: 5px; padding-left:5px; line-height: 1.5;">
-			<H3>Hôm nay:<p id="time" style="text-align:center"></p>
-			</H3>
-			<hr>
-			<div id="Lamp_Display"></div>
-			<hr>
-
-			<h4>Hướng dẫn</h4>
-			<p>Bước 1: Bắt đầu/kết thúc điều khiển bằng cách nhấn nút START/STOP</p>
-			<p>Bước 2: Chọn chế độ làm việc TỰ ĐỘNG/TAY. </p>
-			<p>Bước 3: Nếu chọn chế độ TỰ ĐỘNG thì chọn bơm làm việc trước</p>
-			<p>Bước 4: Nếu chọn chế độ TAY thì chọn bơm làm việc</p>
-			<p>Bước 5: Để xem chi tiết mực nước thay đổi theo dạng đồ thị vui lòng chuyển sang trang TREND </p>
+		<div id="right"  >
+			
+			<div class="container">
+				<div class="show-water-level" style="text-align: center;">
+					<p style="margin: 4px 0px 2px 0px;"> MỨC NƯỚC:</p>
+					<input style="text-align: center; width: 80%; color:blue;" ; id="quang2222222" disabled="disabled"
+						type="text" />
+				</div>
+				<div class="container">
+							<div class="column" style=" text-align: -webkit-center; ">
+								<div class="show-water-level" style="text-align: center;">
+									<p style="margin: 4px 0px 2px 0px;"> LƯU LƯỢNG CỬA XẢ 1:</p>
+										<input style="text-align: center; width: 100%; color:blue;" ; id="luu_luong_CX1" disabled="disabled" type="text" />
+								</div>
+								<div class="show-water-level" style="text-align: center;">
+									<p style="margin: 4px 0px 2px 0px;"> TỔNG LƯU LƯỢNG CỬA XẢ 1:</p>
+										<input style="text-align: center; width: 100%; color:blue;" ; id="Tong_luu_luong_CX1" disabled="disabled" type="text" />
+								</div>
+							</div>
+						<div class="column" style=" text-align: -webkit-center; ">
+							<div class="show-water-level" style="text-align: center;">
+								<p style="margin: 4px 0px 2px 0px;"> LƯU LƯỢNG CỦA XẢ 2:</p>
+									<input style="text-align: center; width: 100%; color:blue;" ; id="luu_luong_CX2" disabled="disabled" type="text" />
+							</div>
+							<div class="show-water-level" style="text-align: center;">
+								<p style="margin: 4px 0px 2px 0px;"> TỔNG LƯU LƯỢNG CỬA XẢ 2:</p>
+									<input style="text-align: center; width: 100%; color:blue;" ; id="Tong_luu_luong_CX2" disabled="disabled" type="text" />
+							</div>
+						</div>
+				</div>
+			</div>
 		</div>
-
 		<div id="footer">
 
 			<table>
 				  <tr>
-					    <td> NGUYỄN HỒNG QUANG </td>
-					  </tr>
+				    <td> NGUYỄN HỒNG QUANG </td>
+				  </tr>
 				<tr>
 					<td>Số điện thoại: 0355-596-329</td>
 				</tr>

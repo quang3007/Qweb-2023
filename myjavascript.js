@@ -98,8 +98,10 @@ function IOField(ObjectID, tag) {
 // HIỂN THỊ DỮ LIỆU LÊN IO FIELD
 setInterval(function () {
     IOField("quang2222222", "MUC_NUOC");
-    IOField("luu_luong", "DATA");
-
+    IOField("luu_luong_CX1", "LLCX1");
+    IOField("luu_luong_CX2", "LLCX2");
+    IOField("Tong_luu_luong_CX1", "TONG_LLCX1");
+    IOField("Tong_luu_luong_CX2", "TONG_LLCX2");
 }, 1000);
 
 // xu ly den tin hieu
@@ -110,7 +112,7 @@ setInterval(function () {
         let K1 = result['K1'];
         let K2 = result['K2'];
         let D1 = result['D1'];
-        // let START = result['START'];
+         let START = result['START'];
         // console.log('K1: ' + K1);
         // console.log('K2: ' + K2);
         // console.log('D1: ' + D1);
@@ -133,11 +135,17 @@ setInterval(function () {
             $(".signal_lights_for_water" ).css("background-color", "rgb(85, 68, 63)");
         }
 
-        // if (START == 1) {
-        //     $(".signal_lights_ON" ).css("background-color", "green");
-        // } else {
-        //     $(".signal_lights_ON" ).css("background-color", "RED");
-        // }
+        if (START == 1) {
+            $(".signal_lights_ON" ).css("background-color", "green");
+           
+        } else {
+            if(D1 ==1){
+                $(".signal_lights_ON" ).css("background-color", "yellow");
+            } else {
+                $(".signal_lights_ON" ).css("background-color", "ping");
+            }
+            $(".signal_lights_ON" ).css("background-color", "RED");
+        }
     });
 }, 1000);
 
