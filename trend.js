@@ -34,6 +34,8 @@ function report_display() {
   var text_1 = document.getElementById("report1");
   setInterval(function () {
     let mucNuoc = $('#quang2222222').val() ? parseFloat($('#quang2222222').val()) : 0;
+    let tongLuuLuongCuaXa1 = $('#Tong_luu_luong_CX1').val() ? parseFloat($('#Tong_luu_luong_CX1').val()) : 0;
+    let tongLuuLuongCuaXa2 = $('#Tong_luu_luong_CX2').val() ? parseFloat($('#Tong_luu_luong_CX2').val()) : 0;
     if (startPrj == 1) {
       let status = "ON";
         if ((onAutoPrj == 1 ) && (onHandmadePrj == 0 )){
@@ -48,7 +50,10 @@ function report_display() {
             } else {
               statusCuaxa2 ="OFF";
             }
-            arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", Chế độ:" + statusmode +  ", Trạng thái cửa xả 1:" + statusCuaxa1 + ",Trạng thái cửa xả 2:" + statusCuaxa2 + " " + "Mực nước: " + mucNuoc;
+            arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status 
+            + ", Chế độ:" + statusmode +  ", Trạng thái cửa xả 1:" + statusCuaxa1 
+            + ",Trạng thái cửa xả 2:" + statusCuaxa2 + " " + "Mực nước: " + mucNuoc+"(cm) "
+            + " Tổng lưu lượng cửa xả 1: " + tongLuuLuongCuaXa1 +"(L)" + " Tổng lưu lượng cửa xả 2: " + tongLuuLuongCuaXa2 +"(L)";
         } else {
           let statusmode ="TAY";
             if (onHandmadePrj == 1 && onHandmadeCuaxa1Prj == 1){
@@ -61,7 +66,10 @@ function report_display() {
             } else {
               statusCuaxa2 ="OFF";
             }
-            arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", Chế độ:" + statusmode +  ", Trạng thái cửa xả 1:" + statusCuaxa1 + ",Trạng thái cửa xả 2:" + statusCuaxa2 + " " + "Mực nước: " + mucNuoc;
+            arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status 
+            + ", Chế độ:" + statusmode +  ", Trạng thái cửa xả 1:" + statusCuaxa1 
+            + ",Trạng thái cửa xả 2:" + statusCuaxa2 + " " + "Mực nước: " + mucNuoc+"(cm) "
+            + " Tổng lưu lượng cửa xả 1: " + tongLuuLuongCuaXa1 +"(L)" + " Tổng lưu lượng cửa xả 2: " + tongLuuLuongCuaXa2 +"(L)";
          }
       // if ((onAutoPrj == 1 && onAutoCuaxa1Prj == 1) || (onHandmadePrj == 1 && onHandmadeCuaxa1Prj == 1)) {
       //   statusCuaxa1 = "ON";
