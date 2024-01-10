@@ -6,6 +6,13 @@ let CM3_12;
 let CM3_34;
 
 function handleColorBtn() {
+    //  tra về falsy khi localStorage.getItem("startProject") = 0, undefined, null, NaN, ''
+    // if (localStorage.getItem("startProject") == true) {
+    //     startPrj = localStorage.getItem("startProject");
+    // } else {
+    //     startPrj = 0;
+    // }
+
     let startPrj = localStorage.getItem("startProject") ? localStorage.getItem("startProject") : 0;
     let onAutoPrj = localStorage.getItem("onAuto") ? localStorage.getItem("onAuto") : 0;
     let onAutoCuaxa1Prj = localStorage.getItem("onAutoCuaxa1") ? localStorage.getItem("onAutoCuaxa1") : 0;
@@ -85,6 +92,7 @@ function handleColorBtn() {
 }
 
 $(document).ready(function() {
+    console.log('day la ready ');
     handleColorBtn();
 });
 
@@ -163,7 +171,10 @@ function startProject() {
     sdata += '&' + encodeURI('"2ND"')+'=0';
     sdata += '&' + encodeURI('"CM3_12"')+'=0';
     sdata += '&' + encodeURI('"CM_34"')+'=0';
-    $.post(ulr, sdata, function(result2){});
+    console.log(sdata);
+    $.post(ulr, sdata, function(result2){
+        console.log(result2);
+    });
     
     handleColorBtn();
 }

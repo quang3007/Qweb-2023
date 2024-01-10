@@ -36,6 +36,8 @@ function report_display() {
     let mucNuoc = $('#quang2222222').val() ? parseFloat($('#quang2222222').val()) : 0;
     let tongLuuLuongCuaXa1 = $('#Tong_luu_luong_CX1').val() ? parseFloat($('#Tong_luu_luong_CX1').val()) : 0;
     let tongLuuLuongCuaXa2 = $('#Tong_luu_luong_CX2').val() ? parseFloat($('#Tong_luu_luong_CX2').val()) : 0;
+    let LuuLuongCuaXa1 = $('#luu_luong_CX1').val() ? parseFloat($('#luu_luong_CX1').val()) : 0;
+    let LuuLuongCuaXa2 = $('#luu_luong_CX2').val() ? parseFloat($('#luu_luong_CX2').val()) : 0;
     if (startPrj == 1) {
       let status = "ON";
         if ((onAutoPrj == 1 ) && (onHandmadePrj == 0 )){
