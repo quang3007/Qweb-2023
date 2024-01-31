@@ -1,3 +1,11 @@
+//Lay thoi gian thuc
+function gettime() {
+  setInterval(function () {
+    d = new Date();
+    thoigian = d.toLocaleString();
+  }, 1000);
+}
+
 let thoigian;
 let startPrj = localStorage.getItem("startProject") ? localStorage.getItem("startProject") : 0;
 let onAutoPrj = localStorage.getItem("onAuto") ? localStorage.getItem("onAuto") : 0;
@@ -6,6 +14,8 @@ let onAutoCuaxa2Prj = localStorage.getItem("onAutoCuaxa2") ? localStorage.getIte
 let onHandmadePrj = localStorage.getItem("onHandmade") ? localStorage.getItem("onHandmade") : 0;
 let onHandmadeCuaxa1Prj = localStorage.getItem("onHandmadeCuaxa1") ? localStorage.getItem("onHandmadeCuaxa1") : 0;
 let onHandmadeCuaxa2Prj = localStorage.getItem("onHandmadeCuaxa2") ? localStorage.getItem("onHandmadeCuaxa2") : 0;
+
+
 // Hàm chức năng đọc giá trị tag
 function IOField(ObjectID, tag) {
   url = "get_data.html";
@@ -56,7 +66,7 @@ function report_display() {
             + ", Chế độ:" + statusmode +  ", Trạng thái cửa xả 1:" + statusCuaxa1 
             + ",Trạng thái cửa xả 2:" + statusCuaxa2 + " " + "Mực nước: " + mucNuoc+"(cm) "
             + " Tổng lưu lượng cửa xả 1: " + tongLuuLuongCuaXa1 +"(L)" + " Tổng lưu lượng cửa xả 2: " + tongLuuLuongCuaXa2 +"(L)";
-        } else {
+        } else if ((onAutoPrj == 0 ) && (onHandmadePrj == 1 )) {
           let statusmode ="TAY";
             if (onHandmadePrj == 1 && onHandmadeCuaxa1Prj == 1){
               statusCuaxa1 = "ON";
@@ -72,21 +82,13 @@ function report_display() {
             + ", Chế độ:" + statusmode +  ", Trạng thái cửa xả 1:" + statusCuaxa1 
             + ",Trạng thái cửa xả 2:" + statusCuaxa2 + " " + "Mực nước: " + mucNuoc+"(cm) "
             + " Tổng lưu lượng cửa xả 1: " + tongLuuLuongCuaXa1 +"(L)" + " Tổng lưu lượng cửa xả 2: " + tongLuuLuongCuaXa2 +"(L)";
+         } else {
+          arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status ;
          }
-      // if ((onAutoPrj == 1 && onAutoCuaxa1Prj == 1) || (onHandmadePrj == 1 && onHandmadeCuaxa1Prj == 1)) {
-      //   statusCuaxa1 = "ON";
-      // } else {
-      //   statusCuaxa1 = "OFF";
-      // }
-      // if ((onAutoPrj == 1 && onAutoCuaxa2Prj == 1) || (onHandmadePrj == 1 && onHandmadeCuaxa2Prj == 1)){
-      //   statusCuaxa2 ="ON";
-      // } else {
-      //   statusCuaxa2 = "OFF";
-      // }
-      // arr_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", Trạng thái cửa xả 1:" + statusCuaxa1 + ",Trạng thái cửa xả 2:" + statusCuaxa2 + " " + "Mực nước: " + mucNuoc;
+      r_display_1 = 'Thời gian: ' + thoigian + ", Trạng thái:" + status + ", Trạng thái cửa xả 1:" + statusCuaxa1 + ",Trạng thái cửa xả 2:" + statusCuaxa2 + " " + "Mực nước: " + mucNuoc;
     } else {
       let status = "OFF";
-      arr_display_1 = 'Thời gian: ' + null + thoigian + ", Trạng thái:" + status ;
+      arr_display_1 = 'Thời gian: '  + thoigian + ", Trạng thái:" + status ;
     }
 
     
@@ -146,14 +148,56 @@ function destroyClickedElement(event) {
   document.body.removeChild(event.target);
 }
 
-//Lay thoi gian thuc
-function gettime() {
-  setInterval(function () {
-    d = new Date();
-    n = d.toLocaleString();
-    thoigian = n;
-  }, 1000);
+function saveTextAsFile2() {
+  // Lấy nội dung của phần tử có id là 'report1' và gán vào biến textToWrite.
+  var textToWrite = $('#report1').html();
+
+  // Thay thế mỗi thẻ <br> bằng dấu xuống dòng "\n".
+  var textToWrite = textToWrite.replaceAll('<br>', '\n');
+
+  // Tạo một đối tượng Blob từ nội dung văn bản với kiểu là 'text/plain'.
+  var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+
+  // Tạo tên file để lưu, sử dụng thời gian hiện tại (biến thoigian).
+  var fileNameToSaveAs = 'REPORT-SCADA_' + thoigian;
+
+  // Tạo một thẻ <a> để tạo liên kết download.
+  var downloadLink = document.createElement("a");
+
+  // Thiết lập thuộc tính download của thẻ <a> là tên file.
+  downloadLink.download = fileNameToSaveAs;
+
+  // Đặt nội dung hiển thị của thẻ <a> là "Download File".
+  downloadLink.innerHTML = "Download File";
+
+  // Kiểm tra xem trình duyệt có hỗ trợ window.webkitURL hay không (trình duyệt Chrome).
+  if (window.webkitURL !== null) {
+    // Trình duyệt Chrome cho phép liên kết được nhấp mà không cần thêm vào DOM.
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+  } else {
+    // Trình duyệt Firefox yêu cầu thẻ <a> được thêm vào DOM trước khi có thể nhấp.
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+
+    // Thiết lập sự kiện onclick để xóa thẻ <a> khi đã nhấp.
+    downloadLink.onclick = destroyClickedElement;
+
+    // Ẩn thẻ <a>.
+    downloadLink.style.display = "none";
+
+    // Thêm thẻ <a> vào body của tài liệu.
+    document.body.appendChild(downloadLink);
+
+  }
+
+  // Gọi phương thức click để kích hoạt quá trình tải về.
+  downloadLink.click();
 }
+
+// Hàm để xóa thẻ <a> sau khi đã nhấp.
+function destroyClickedElement(event) {
+  document.body.removeChild(event.target);
+}
+
 
 //====================================================================================================
 //			VE DO THI
@@ -162,7 +206,7 @@ function vedothi() {
   var line = new TimeSeries();
   setInterval(function () {
     let mucNuoc = $('#quang2222222').val() ? parseFloat($('#quang2222222').val()) : 0;
-    line.append(new Date().getTime(), mucNuoc); //Math.random()*100				   
+    line.append(new Date().getTime(), Math.random()*50); //Math.random()*100				   
   }, 1000);
 
   var smoothie = new SmoothieChart(
@@ -180,7 +224,7 @@ function vedothi() {
       scaleSmoothing: 0.266,
       timestampFormatter: SmoothieChart.timeFormatter
     });
-  smoothie.addTimeSeries(line, { strokeStyle: 'rgb(0, 255, 0)', lineWidth: 3 });
+  smoothie.addTimeSeries(line, { strokeStyle:'rgb(0, 255, 0)', fillStyle:'rgba(0, 255, 0, 0.4)', lineWidth:3 });
 
   smoothie.streamTo(document.getElementById("mycanvas1"), 1000);
 }

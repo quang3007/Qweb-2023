@@ -92,7 +92,6 @@ function handleColorBtn() {
 }
 
 $(document).ready(function() {
-    console.log('day la ready ');
     handleColorBtn();
 });
 
@@ -101,7 +100,7 @@ function IOField(ObjectID, tag) {
     url = "get_data.html";
     $.getJSON(url, function (result) {
         document.getElementById(ObjectID).value = result[tag];
-    });
+            });
 }
 // HIỂN THỊ DỮ LIỆU LÊN IO FIELD
 setInterval(function () {
@@ -145,13 +144,7 @@ setInterval(function () {
 
         if (START == 1) {
             $(".signal_lights_ON" ).css("background-color", "green");
-           
         } else {
-            if(D1 ==1){
-                $(".signal_lights_ON" ).css("background-color", "yellow");
-            } else {
-                $(".signal_lights_ON" ).css("background-color", "ping");
-            }
             $(".signal_lights_ON" ).css("background-color", "RED");
         }
     });
@@ -172,11 +165,12 @@ function startProject() {
     sdata += '&' + encodeURI('"CM3_12"')+'=0';
     sdata += '&' + encodeURI('"CM_34"')+'=0';
     console.log(sdata);
-    $.post(ulr, sdata, function(result2){
-        console.log(result2);
+    $.post(ulr, sdata, function(){
     });
     
     handleColorBtn();
+    // gui data xuong server
+    // doi mau btn
 }
 
 function stopProject() {
@@ -192,7 +186,7 @@ function stopProject() {
     sdata += '&' + encodeURI('"2ND"')+'=0';
     sdata += '&' + encodeURI('"CM3_12"')+'=0';
     sdata += '&' + encodeURI('"CM3_34"')+'=0';
-    $.post(ulr, sdata, function(result2){});
+    $.post(ulr, sdata, function(){});
 
     handleColorBtn();
 }
@@ -264,7 +258,7 @@ function onHandmadeCuaxa1() {
     ulr = 'post_data.html';
     sdata = encodeURI('"1ND"')+'=1';
     sdata += '&' + encodeURI('"1NC"')+'=0';
-    $.post(ulr, sdata, function(result2){});
+    $.post(ulr, sdata, function(){});
     handleColorBtn();
 }
 
